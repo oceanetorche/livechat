@@ -9,9 +9,8 @@
 <section>
     <div>
         <div>
-
             <div>
-                <form>
+                <form method="post" action="index.php?action=login">
                     <h4>
                         Connectez-vous
                     </h4>

@@ -23,7 +23,7 @@
         <div>
 
             <div>
-                <form>
+                <form method="post" action="index.php?action=signup">
                     <h4>
                         Inscrivez-vous
                     </h4>
