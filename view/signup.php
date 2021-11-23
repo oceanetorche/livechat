@@ -46,7 +46,7 @@
                     <div>
                         <input type="password" name="password" placeholder="Mot de passe">
                     </div>
-                    <input type="submit" value="login"><br>
+                    <input type="submit" value="S'inscrire"><br>
                     <input type="reset" value="Annuler">
 
                 </form>
