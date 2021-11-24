@@ -8,7 +8,7 @@ Membres du groupe :
 	- Henry Burgat
 Responsables de projet : 
 	- Julien Ithurbide
-	- Pascal Hurni
+	
 Languages utilisés :  HTML/CSS, Javascript, PHP, MySQL
 
 But du projet :
