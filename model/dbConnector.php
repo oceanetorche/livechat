@@ -21,9 +21,9 @@ function openDBConnexion()
     $hostname = 'localhost';
     $port = 3306;
     $charset = 'utf8';
-    $dbName = 'snows';
-    $userName = '151snow'; //to change
-    $userPwd = 'P@ssw0rd';
+    $dbName = 'livechatDB';
+    $userName = 'livechat'; //to change
+    $userPwd = 'Pa$$w0rd';
     $dsn = $sqlDriver . ':host=' . $hostname . ';dbname=' . $dbName . ';port=' . $port . ';charset=' . $charset;
 
     try {
