@@ -11,30 +11,27 @@ ob_start();
 $title = "Login";
 
 ?>
-
-<!-- content page -->
-<section>
+    <!-- content page -->
     <div>
-        <div>
+        <div class="container col-10 col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xl-6">
             <div>
-                <form method="post" action="index.php?action=login">
-                    <h4>Connectez-vous</h4>
-
-                    <div>
-                        <input type="email" name="email" placeholder="Adresse email">
-                    </div>
-
-                    <div>
-                        <input type="password" name="password" placeholder="Mot de passe">
-                    </div>
-                    <input type="submit" value="login"><br>
-                    <input type="reset" value="Annuler">
-
-                </form>
+                <h1 id="title">WASSAP</h1>
             </div>
+            <form class="form" method="post" action="index.php?action=login">
+                <h4>Connectez-vous</h4>
+
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+                </div>
+                <input type="submit" value="login"><br>
+                <input type="reset" value="Annuler">
+            </form>
         </div>
     </div>
-</section>
+    <!---->
 
 <?php
 $content = ob_get_clean();
