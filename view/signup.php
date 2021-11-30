@@ -7,15 +7,11 @@
  * @version   23.11.2021
  */
 
+ob_start();
+$title = "Sign up";
+
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign up</title>
-</head>
-<body>
 
 <!-- content page -->
 <section>
@@ -57,3 +53,9 @@
 
 </body>
 </html>
+
+
+<?php
+$content = ob_get_clean();
+require "gabarit.php";
+?>

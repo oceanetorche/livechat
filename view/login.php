@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Connexion</title>
-</head>
-<body>
+<?php
+
+/**
+ * @file      login.php
+ * @brief     File description
+ * @author    Created by Henry Burgat & Océane Torche
+ * @version   23.11.2021
+ */
+
+ob_start();
+$title = "Login";
+
+?>
+
 <!-- content page -->
 <section>
     <div>
@@ -31,5 +38,7 @@
     </div>
 </section>
 
-</body>
-</html>
+<?php
+$content = ob_get_clean();
+require "gabarit.php";
+?>
