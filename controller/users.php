@@ -9,8 +9,12 @@
 
 require 'model/userManagement.php';
 
-function signup(){}
+function signup(){
+    require "view/signup.php";
+}
 
-function login($data){}
+function login($data){
+
+}
 
 function logout(){}

@@ -20,9 +20,7 @@ $title = "Sign up";
 
             <div>
                 <form method="post" action="index.php?action=signup">
-                    <h4>
-                        Inscrivez-vous
-                    </h4>
+                    <h4>Inscrivez-vous</h4>
 
                     <div>
                         <input type="text" name="firstname" placeholder="Prénom">

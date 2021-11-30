@@ -7,6 +7,7 @@
  * @version   23.11.2021
  */
 
+session_start();
 
 require "controller/controller.php";
 require "controller/users.php";
@@ -30,5 +31,5 @@ if (isset($_GET['action'])) {
             home();
     }
 } else {
-    home();
+    signup();
 }
