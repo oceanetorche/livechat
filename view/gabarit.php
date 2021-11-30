@@ -15,24 +15,18 @@
     <title><?=$title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <!-- BOOTSTRAP CSS, JQUERY, JS, COMPILED JAVASCRIPT -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-
-
     <!-- CUSTOMED CSS -->
     <link rel="stylesheet" href="css/main.css">
-
-
 
 </head>
 <body>
 
 
 <!-- OUR CONTENT -->
-
-<?=$content; ?>
+<?= $content; ?>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -18,9 +18,7 @@ $title = "Login";
         <div>
             <div>
                 <form method="post" action="index.php?action=login">
-                    <h4>
-                        Connectez-vous
-                    </h4>
+                    <h4>Connectez-vous</h4>
 
                     <div>
                         <input type="email" name="email" placeholder="Adresse email">
