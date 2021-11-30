@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- CUSTOMED CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../../view/css/main.css">
 
 </head>
 <body>
