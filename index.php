@@ -15,6 +15,9 @@ require "controller/users.php";
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
+        case 'goToSignUp':
+            goToSignUp();
+            break;
         case 'signup' :
             signup($_POST);
             break;

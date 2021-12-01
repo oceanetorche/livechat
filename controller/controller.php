@@ -14,3 +14,7 @@ function home(){
 function welcome(){
     require "view/login.php";
 }
+
+function goToSignUp(){
+    require "view/signup.php";
+}
