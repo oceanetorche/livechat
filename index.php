@@ -16,7 +16,7 @@ if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
         case 'signup' :
-            signup();
+            signup($_POST);
             break;
         case 'home' :
             home();
@@ -31,5 +31,5 @@ if (isset($_GET['action'])) {
             home();
     }
 } else {
-    signup();
+    welcome();
 }

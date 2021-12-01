@@ -9,8 +9,8 @@
 
 require 'model/userManagement.php';
 
-function signup(){
-    require "view/signup.php";
+function signup($data){
+
 }
 
 function login($data){

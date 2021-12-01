@@ -18,6 +18,7 @@ $title = "Sign up";
     <div>
         <div>
 
+
             <div>
                 <form method="post" action="index.php?action=signup">
                     <h4>Inscrivez-vous</h4>
