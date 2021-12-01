@@ -26,6 +26,7 @@ $title = "Login";
                 <div class="form-group">
                     <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
                 </div>
+                <p>Don't have an account? <a href="signup.php">Create an account</a></p>
                 <input type="submit" value="login"><br>
                 <input type="reset" value="Annuler">
             </form>
