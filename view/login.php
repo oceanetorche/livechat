@@ -12,26 +12,27 @@ $title = "Login";
 
 ?>
     <!-- content page -->
-    <div>
-        <div class="container col-10 col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xl-6">
-            <div>
-                <h1 id="title">WASSAP</h1>
-            </div>
-            <form class="form" method="post" action="index.php?action=login">
-                <h4>Connectez-vous</h4>
+<div class="container d-flex align-items-center">
+    <form id="formLogin" class="form col-10 col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xl-6">
 
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
-                </div>
-                <p>Don't have an account? <a href="index.php?action=goToSignUp.php">Create an account</a></p>
-                <input type="submit" value="login"><br>
-                <input type="reset" value="Annuler">
-            </form>
+        <h3>Log in</h3>
+
+        <div class="form-outline mb-4">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
         </div>
-    </div>
+
+        <div class="form-outline mb-4">
+            <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+        </div>
+
+        <div class="pt-1 mb-4">
+            <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+        </div>
+
+        <p>Don't have an account? <a href="index.php?action=goToSignUp.php">Create an account</a></p>
+    </form>
+</div>
+
     <!---->
 
 <?php
