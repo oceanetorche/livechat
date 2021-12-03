@@ -10,7 +10,19 @@
 require 'model/userManagement.php';
 
 function signup($data){
+    // check infos have been set and if we come from login page
+    if(isset($data['firstname']) && isset($data['lastname']) && isset($data['pseudo']) && isset($data['email']) && isset($data['password'])){
+        if(addToDB($data)){
+            require 'view/login.php';
+        }else{
+            $errorMessage = "Email incorrect";
+            require 'view/signup.php';
+        }
 
+    }else{
+
+        require 'view/signup.php';
+    }
 }
 
 function login($data){
