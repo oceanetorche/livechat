@@ -16,28 +16,35 @@ $title = "Sign up";
     <div id="formWrapper">
 
         <form id="formSignUp" method="post" action="index.php?action=signup">
-            <h4>Inscrivez-vous</h4>
+            <h1>WASSAP</h1>
+            <h3>Inscrivez-vous</h3>
 
-            <div>
-                <input type="text" name="firstname" placeholder="Prénom">
+
+            <div class="form-outline mb-4">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname">
             </div>
-            <div>
-                <input type="text" name="lastname" placeholder="Nom">
+            <div class="form-outline mb-4">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname">
+            </div>
+            <div class="form-outline mb-4">
+                <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Username">
+            </div>
+            <div class="form-outline mb-4">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-outline mb-4">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-outline mb-4">
+                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password">
             </div>
 
-            <div>
-                <input type="text" name="pseudo" placeholder="Pseudo">
+            <div class="pt-1 mb-4">
+                <button class="btn btn-info btn-lg btn-block" type="submit">Sign Up</button>
             </div>
-
-            <div>
-                <input type="email" name="email" placeholder="Adresse email">
+            <div class="pt-1 mb-4">
+                <button class="btn btn-info btn-lg btn-block" type="submit">Annuler</button>
             </div>
-
-            <div>
-                <input type="password" name="password" placeholder="Mot de passe">
-            </div>
-            <input type="submit" value="S'inscrire"><br>
-            <input type="reset" value="Annuler">
 
         </form>
 
