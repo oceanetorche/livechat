@@ -11,9 +11,12 @@ ob_start();
 $title = "Login";
 
 ?>
-<div>
-    <div class="container-fluid" id="formLogin">
-        <form>
+    <html>
+    <body>
+    <div id="formWrapper">
+
+        <form id="formLogin" method="post" action="index.php?action=login">
+            <h1>WASSAP</h1>
             <h3>Log in</h3>
 
             <div class="form-outline mb-4">
@@ -30,8 +33,11 @@ $title = "Login";
 
             <p>Don't have an account? <a href="index.php?action=goToSignUp.php">Create an account</a></p>
         </form>
+
     </div>
-</div>
+    </body>
+    </html>
+
 
 <?php
 $content = ob_get_clean();

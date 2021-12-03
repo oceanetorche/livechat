@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS `LiveChat_DB`.`Users` (
   `lastname` VARCHAR(60) NOT NULL,
   `username` VARCHAR(25) NOT NULL,
   `email` VARCHAR(254) NOT NULL,
+`password` VARCHAR(100) NOT NULL,
   `registration_date` DATE NOT NULL,
   `Chatroom_id` INT NULL,
   `Users_states_id` INT NOT NULL,
