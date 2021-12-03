@@ -22,11 +22,13 @@ function addToDB($data){
     $status = 2;
     $chatroom = null;
 
+    //status mis en dur !!
+    // index unique username enlevé !
+    // les données ne passent pas jusqu'à la DB!!
+
 
     $query="INSERT INTO users (firstname, lastname,username,password,email,registration_date,Chatroom_id,Users_states_id) values (firstname=:ffn,lastname=:fln,username=:fun,email=:fem,password=:fpw,registration_date=:rd,Chatroom_id=:chi,2) ";
     $params = array(':ffn' => $firstname,':fln' => $lastname,':fun' => $username, ':fem' => $email, ':fpw' => $pwd,':rd'=>$registration,':chi'=>$chatroom);
-
-
 
     //open DB Connection
     $dbConnexion = openDBConnexion();
