@@ -31,7 +31,7 @@ if (isset($_GET['action'])) {
             logout();
             break;
         default :
-            home();
+            goToSignUp();
     }
 } else {
     welcome();
