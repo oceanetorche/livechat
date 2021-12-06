@@ -19,16 +19,8 @@ function addToDB($data){
     $email = $data['email'];
     $pwd = $data['password'];
     $registration = date('Y/m/d H:i:s');
-    $status = 2;
-    $chatroom = null;
-
-    //status mis en dur !!
-    // index unique username enlevé !
-    // les données ne passent pas jusqu'à la DB!!
-
-
-    $query="INSERT INTO users (firstname, lastname,username,password,email,registration_date,Chatroom_id,Users_states_id) values (firstname=:ffn,lastname=:fln,username=:fun,email=:fem,password=:fpw,registration_date=:rd,Chatroom_id=:chi,2) ";
-    $params = array(':ffn' => $firstname,':fln' => $lastname,':fun' => $username, ':fem' => $email, ':fpw' => $pwd,':rd'=>$registration,':chi'=>$chatroom);
+    $status = 2; //means disconnected
+    $chatroom = null; //not in a room
 
     //open DB Connection
     $dbConnexion = openDBConnexion();
@@ -36,11 +28,21 @@ function addToDB($data){
 
     if ($dbConnexion != null) {
         //preparation query
-        $statement = $dbConnexion->prepare($query);
+       $statement = $dbConnexion->prepare('INSERT INTO users (firstname, lastname,username,email,password,registration_date,Chatroom_id,Users_states_id) values (:firstname,:lastname,:username,:pwd,:email,:registration,:chat,:status)');
+
+
+        $statement->bindParam(':firstname',$firstname);
+        $statement->bindParam(':lastname',$lastname);
+        $statement->bindParam(':username',$username);
+        $statement->bindParam(':email',$email);
+        $statement->bindParam(':pwd',$pwd);
+        $statement->bindParam(':registration',$registration);
+        $statement->bindParam(':chat',$chatroom);
+        $statement->bindParam(':status',$status);
 
 
         //we execute the request with the parameters used on the query
-        $statement -> execute($params);
+        $statement -> execute();
 
 
         return 1;
