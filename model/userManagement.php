@@ -17,7 +17,7 @@ function addToDB($data){
     $lastname = $data['lastname'];
     $username = $data['pseudo'];
     $email = $data['email'];
-    $pwd = $data['password'];
+    $pwd = password_hash($data['password'],PASSWORD_DEFAULT);
     $registration = date('Y/m/d H:i:s');
     $status = 2; //means disconnected
     $chatroom = null; //not in a room
@@ -28,7 +28,7 @@ function addToDB($data){
 
     if ($dbConnexion != null) {
         //preparation query
-       $statement = $dbConnexion->prepare('INSERT INTO users (firstname, lastname,username,email,password,registration_date,Chatroom_id,Users_states_id) values (:firstname,:lastname,:username,:pwd,:email,:registration,:chat,:status)');
+       $statement = $dbConnexion->prepare('INSERT INTO users (firstname, lastname,username,email,password,registration_date,Chatroom_id,Users_states_id) values (:firstname,:lastname,:username,:email,:pwd,:registration,:chat,:status)');
 
 
         $statement->bindParam(':firstname',$firstname);
@@ -51,4 +51,34 @@ function addToDB($data){
     $dbConnexion = null;
 
      return 0;
+}
+
+
+function checkLogin($data){
+
+    $email = $data['email'];
+    $password = $data['pwd'];
+
+    $query="SELECT password FROM users WHERE email=:femail ";
+    $params = array(':femail' => $email);
+
+    $dataDB = executeQuerySelect($query,$params);
+
+
+    if($dataDB !=null){
+        foreach ($dataDB as $key => $tab){
+            foreach ($tab as $key2 => $pw){
+                if(password_verify( $password,$pw)){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        }
+
+        return true;
+
+    }else{
+        return false;
+    }
 }

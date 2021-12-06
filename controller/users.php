@@ -26,7 +26,18 @@ function signup($data){
 }
 
 function login($data){
+    if(isset($data['email']) && isset($data['pwd'])){
+        if(checkLogin($data)){
+            require 'view/home.php';
+        }else{
+            $errorMessage = "Email incorrect";
+            require 'view/login.php';
+        }
 
+    }else{
+
+        require 'view/login.php';
+    }
 }
 
 function logout(){}

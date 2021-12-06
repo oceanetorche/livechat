@@ -33,3 +33,27 @@ function openDBConnexion()
     }
     return $tempDBConnexion;
 }
+
+
+function executeQuerySelect($query, $params)
+{
+    $queryResult = null;
+
+    //open DB Connection
+    $dbConnexion = openDBConnexion();
+
+    //if connection is not null
+    if ($dbConnexion != null) {
+        //preparation query
+        $statement = $dbConnexion->prepare($query);
+
+        //we execute the request with the parameters used on the query
+        $statement -> execute($params);
+
+        //we prepare the results for the navigator
+        $queryResult = $statement->fetchAll();
+
+    }
+    $dbConnexion = null; // Fermeture de ma connection à la BD*/
+    return $queryResult;
+}
