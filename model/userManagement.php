@@ -48,7 +48,7 @@ function addToDB($data){
         return 1;
 
     }
-    $dbConnexion = null; // Fermeture de ma connection à la BD*/
+    $dbConnexion = null;
 
      return 0;
 }
