@@ -10,7 +10,11 @@
 
 require "dbConnector.php";
 
-
+/**
+ * Adds user to DB
+ * @param $data personal data from form
+ * @return int 0 if errror 1 if writes in DB
+ */
 function addToDB($data){
 
     $firstname = $data['firstname'];
@@ -56,7 +60,11 @@ function addToDB($data){
 
 }
 
-
+/**
+ * Checks whether the login matches the DB
+ * @param $data information from form
+ * @return bool true if login is correct, false is login is incorrect
+ */
 function checkLogin($data){
 
     $email = $data['email'];
@@ -85,7 +93,11 @@ function checkLogin($data){
 }
 
 
-
+/**
+ * Checks if the username already exists in DB
+ * @param $givenUsername username given in form
+ * @return bool true if exists, false if doesn't exist
+ */
 function checkUsernameAlreadyExists($givenUsername){
 
     $query = "SELECT * from users WHERE username=:username";
