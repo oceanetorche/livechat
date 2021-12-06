@@ -22,35 +22,38 @@ function addToDB($data){
     $status = 2; //means disconnected
     $chatroom = null; //not in a room
 
-    //open DB Connection
-    $dbConnexion = openDBConnexion();
+    if(checkUsernameAlreadyExists($username)){
+        return 0;
+    }else{
 
+        //open DB Connection
+        $dbConnexion = openDBConnexion();
 
-    if ($dbConnexion != null) {
-        //preparation query
-       $statement = $dbConnexion->prepare('INSERT INTO users (firstname, lastname,username,email,password,registration_date,Chatroom_id,Users_states_id) values (:firstname,:lastname,:username,:email,:pwd,:registration,:chat,:status)');
+        if ($dbConnexion != null) {
+            //preparation query
+            $statement = $dbConnexion->prepare('INSERT INTO users (firstname, lastname,username,email,password,registration_date,Chatroom_id,Users_states_id) values (:firstname,:lastname,:username,:email,:pwd,:registration,:chat,:status)');
 
+            $statement->bindParam(':firstname',$firstname);
+            $statement->bindParam(':lastname',$lastname);
+            $statement->bindParam(':username',$username);
+            $statement->bindParam(':email',$email);
+            $statement->bindParam(':pwd',$pwd);
+            $statement->bindParam(':registration',$registration);
+            $statement->bindParam(':chat',$chatroom);
+            $statement->bindParam(':status',$status);
 
-        $statement->bindParam(':firstname',$firstname);
-        $statement->bindParam(':lastname',$lastname);
-        $statement->bindParam(':username',$username);
-        $statement->bindParam(':email',$email);
-        $statement->bindParam(':pwd',$pwd);
-        $statement->bindParam(':registration',$registration);
-        $statement->bindParam(':chat',$chatroom);
-        $statement->bindParam(':status',$status);
+            //we execute the request with the parameters used on the query
+            $statement -> execute();
 
+            return 1;
 
-        //we execute the request with the parameters used on the query
-        $statement -> execute();
+        }
+        $dbConnexion = null;
 
-
-        return 1;
-
+        return 0;
     }
-    $dbConnexion = null;
 
-     return 0;
+
 }
 
 
@@ -76,9 +79,24 @@ function checkLogin($data){
             }
         }
 
-        return true;
-
     }else{
         return false;
     }
+}
+
+
+
+function checkUsernameAlreadyExists($givenUsername){
+
+    $query = "SELECT * from users WHERE username=:username";
+
+    $params = array(':username' => $givenUsername);
+    $dataDB = executeQuerySelect($query,$params);
+
+    if($dataDB !=null){
+        return true;
+    }else{
+        return false;
+    }
+
 }
