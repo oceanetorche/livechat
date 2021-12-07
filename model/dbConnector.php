@@ -3,9 +3,8 @@
 /**
  * @file      dbConnector.php
  * @brief     This controller is designed to manage database accesses and transactions
- * @author    Created by Pascal.BENZONANA
- * @author    Updated by Nicolas.GLASSEY, Frederique.ANDOLFATTO
- * @version   22-NOV-2021
+ * @author    Created by Henry Burgat & Océane Torche
+ * @version   28.11.2021
  */
 
 /**
