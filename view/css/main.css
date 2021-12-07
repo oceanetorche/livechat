@@ -2,10 +2,7 @@
 /*     LOGIN     */
 /* ------------- */
 
-html,body{
-    height:100%;
-    background-color: floralwhite;
-}
+
 
 #formWrapper {
     background: #333;
@@ -61,3 +58,20 @@ h1 {
 /* --------------- */
 /*     SIGN UP     */
 /* --------------- */
+
+/* --------------- */
+/*       HOME      */
+/* --------------- */
+
+#homeBigWrapper {
+    background-color: aquamarine;
+}
+#homeLittleWrapper {
+    background-color: coral;
+}
+#headerHome\ {
+    background-color: aqua;
+}
+#mainHome {
+    background-color: deeppink;
+}

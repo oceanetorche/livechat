@@ -12,8 +12,20 @@ $title = "Home";
 
 ?>
 
+<html>
+<body>
+<div>
+    <!-- header -->
+    <div id="headerHome ">
 
-<h1>Welcome</h1>
+    </div>
+    <!-- main -->
+    <div id="mainHome">
+
+    </div>
+</div>
+</body>
+</html>
 
 
 <?php
