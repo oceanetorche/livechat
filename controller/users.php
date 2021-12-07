@@ -18,7 +18,6 @@ function signup($data){
             $errorMessage = "Nom d'utilisateur déjà utilisé";
             require 'view/signup.php';
         }
-
     }else{
 
         require 'view/signup.php';
@@ -33,11 +32,13 @@ function login($data){
             $errorMessage = "Email incorrect";
             require 'view/login.php';
         }
-
     }else{
-
         require 'view/login.php';
     }
 }
 
-function logout(){}
+function logout(){
+    session_destroy();
+    $_SESSION = array();
+    require 'view/login.php';
+}
