@@ -27,6 +27,7 @@ function signup($data){
 function login($data){
     if(isset($data['email']) && isset($data['pwd'])){
         if(checkLogin($data)){
+            updateStatus($_SESSION['id']);
             require 'view/home.php';
         }else{
             $errorMessage = "Email incorrect";
@@ -38,6 +39,7 @@ function login($data){
 }
 
 function logout(){
+    updateStatus($_SESSION['id']);
     session_destroy();
     $_SESSION = array();
     require 'view/login.php';

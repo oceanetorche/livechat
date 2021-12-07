@@ -70,7 +70,7 @@ function checkLogin($data){
     $email = $data['email'];
     $password = $data['pwd'];
 
-    $query="SELECT password FROM users WHERE email=:femail ";
+    $query="SELECT password,id,username,Chatroom_id,Users_states_id FROM users WHERE email=:femail ";
     $params = array(':femail' => $email);
 
     $dataDB = executeQuerySelect($query,$params);
@@ -80,6 +80,12 @@ function checkLogin($data){
         foreach ($dataDB as $key => $tab){
             foreach ($tab as $key2 => $pw){
                 if(password_verify( $password,$pw)){
+
+                    $_SESSION['id'] = $tab['id'];
+                    $_SESSION['username'] = $tab['username'];
+                    $_SESSION['chatroom'] = $tab['Chatroom_id'];
+                    $_SESSION['status'] = $tab['Users_states_id'];
+
                     return true;
                 }else{
                     return false;
@@ -132,5 +138,23 @@ function checkUsernameAlreadyExists($givenUsername){
     }else{
         return false;
     }
+
+}
+
+
+function updateStatus($id){
+
+    if($_SESSION['status']==1){
+        $query = "UPDATE users SET Users_states_id=2 WHERE id=:identity";
+    }else{
+        $query = "UPDATE users SET Users_states_id=1 WHERE id=:identity";
+    }
+
+    $params = array (':identity' =>$id);
+
+    executeQueryInsert($query,$params);
+
+    return 1;
+
 
 }

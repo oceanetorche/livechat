@@ -56,3 +56,22 @@ function executeQuerySelect($query, $params)
     $dbConnexion = null; // Fermeture de ma connection à la BD*/
     return $queryResult;
 }
+
+function executeQueryInsert($query,$param)
+{
+    $dbConnexion = openDBConnexion();
+
+    if ($dbConnexion != null) {
+
+        $statement = $dbConnexion->prepare($query);
+
+        //we execute the request with the parameters used on the query
+        $statement -> execute($param);
+
+        return 1;
+
+    }
+    $dbConnexion = null;
+
+    return 0;
+}
