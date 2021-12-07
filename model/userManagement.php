@@ -26,7 +26,7 @@ function addToDB($data){
     $status = 2; //means disconnected
     $chatroom = null; //not in a room
 
-    if(checkUsernameAlreadyExists($username)){
+    if(checkUsernameAlreadyExists($username) || checkEmailAlreadyExists($email)){
         return 0;
     }else{
 
@@ -91,6 +91,28 @@ function checkLogin($data){
         return false;
     }
 }
+
+
+/**
+ * Checks if the email already exists in DB
+ * @param $givenEmail username given in form
+ * @return bool true if exists, false if doesn't exist
+ */
+function checkEmailAlreadyExists($givenEmail){
+
+    $query = "SELECT * from users WHERE email=:email";
+
+    $params = array(':email' => $givenEmail);
+    $dataDB = executeQuerySelect($query,$params);
+
+    if($dataDB !=null){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
 
 
 /**

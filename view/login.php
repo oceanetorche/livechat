@@ -33,7 +33,7 @@ $title = "Login";
             <?php if(isset($errorMessage)) {?>
             <p class="alert alert-danger"> <?php echo $errorMessage; }?></p>
 
-            <p>Don't have an account? <a href="index.php?action=goToSignUp.php">Create an account</a></p>
+            <p>Don't have an account? <a href="index.php?action=signup">Create an account</a></p>
         </form>
 
     </div>
