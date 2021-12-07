@@ -15,7 +15,7 @@ function signup($data){
         if(addToDB($data)){
             require 'view/login.php';
         }else{
-            $errorMessage = "Nom d'utilisateur déjà utilisé";
+            $errorMessage = "Nom d'utilisateur ou email déjà utilisé";
             require 'view/signup.php';
         }
     }else{
