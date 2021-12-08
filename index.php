@@ -11,6 +11,7 @@ session_start();
 
 require "controller/controller.php";
 require "controller/users.php";
+require "controller/chats.php";
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
@@ -23,6 +24,9 @@ if (isset($_GET['action'])) {
             break;
         case 'login':
             login($_POST);
+            break;
+        case 'chatrooms':
+            displayChatrooms();
             break;
         case 'logout':
             logout();
