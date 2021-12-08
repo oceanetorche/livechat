@@ -28,7 +28,7 @@ function login($data){
     if(isset($data['email']) && isset($data['pwd'])){
         if(checkLogin($data)){
             updateStatus($_SESSION['id']);
-            require 'view/home.php';
+            header("Location: " . 'index.php?action=chatrooms');
         }else{
             $errorMessage = "Email incorrect";
             require 'view/login.php';
