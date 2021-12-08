@@ -103,3 +103,5 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 INSERT INTO users_states (NAME) VALUES ("connected");
 INSERT INTO users_states (NAME) VALUES ("disconnected");
+INSERT INTO chatrooms (NAME,nb_users_max) VALUES ('gaming',10);
+INSERT INTO chatrooms (NAME,nb_users_max) VALUES ('SI-CA2a',10);
