@@ -13,63 +13,63 @@ $title = "Home";
 ?>
 
 <html>
-<body>
+<body id="homeBody">
 
-<div id="homeBigWrapper">
 
-    <div id="homeLittlewrapper" class="col-11 col-xs-11 col-sm-10 col-md-8 col-lg-8">
+
+    <div id="homeLittlewrapper" class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8">
+
         <!-- head  -->
-        <div id="homeHead">
-            <h1>WASSAP</h1>
-            <hr style="height: 5px; background-color: black">
-            <div class="d-flex">
-                <p class="col-8">Welcome <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?></p>
-                <a  class="btn btn-danger col-4" href="index.php?action=logout">LOG OUT </a>
-
+        <div id="homeHead" class="sticky-top">
+            <h1 id="headUp">
+                WASSAP
+            </h1>
+            <hr style="height: 5px; background-color: white">
+            <div class="d-flex justify-content-between align-items-center" id="headDown">
+                <div class="#">
+                    Welcome <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?>
+                </div>
+                <a class="btn btn-danger " href="index.php?action=logout">
+                    LOG OUT
+                </a>
             </div>
+            <hr style="height: 5px; background-color: white">
         </div>
 
 
         <!-- main  -->
         <div id="homeMain">
-
             <?php foreach($arrayChatrooms as $chat){ ?>
-            <div id="chatroom" class="chatroom">
-                <h2 id="chatroomTitle"><?php if(isset($chat['name'])) echo $chat['name'];?></h2>
-                <p id="chatroomDescription"><?php
-                    $nbr=0;
-                    foreach ($arrayPeople as $person){
-                        if($person['Chatroom_id']==$chat['id']){
-                            $nbr++;
+            <div class="chatroom row align-items-center">
+                <div class="col-10">
+                    <h2 id="chatroomTitle"><?php if(isset($chat['name'])) echo $chat['name'];?></h2>
+                    <p id="chatroomDescription"><?php
+                        $nbr=0;
+                        foreach ($arrayPeople as $person){
+                            if($person['Chatroom_id']==$chat['id']){
+                                $nbr++;
+                            }
                         }
-                    }
 
-                    if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'];?></p>
-                <a class="btn btn-primary">Connect</a>
+                        if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'];?></p>
+                </div>
+                <div class="col-2">
+                    <a class="btn btn-info btn-block">Connect</a>
+                </div>
+
             </div>
-
-             <?php }?>
-        </div>
-
-        <div id="headerHome ">
-
-            <p>Chatroom: <?php
-                if($_SESSION['chatroom'] == null) {
-                    echo 'dans aucune room';
-                }else{
-                    echo $_SESSION['chatroom'];
-                }
-                ?></p>
-
+                <br>
+            <?php }?>
 
         </div>
-
     </div>
 
 
 
 
-</div>
+
+
+
 </body>
 </html>
 

@@ -16,7 +16,7 @@ function openDBConnexion()
     $tempDBConnexion = null;
 
     $sqlDriver = 'mysql';
-    $hostname = 'localhost';
+    $hostname = '10.229.32.181';
     $port = 3306;
     $charset = 'utf8';
     $dbName = 'LiveChat_DB';
