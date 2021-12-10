@@ -10,6 +10,7 @@
 ob_start();
 $title = "Sign up";
 
+
 ?>
     <html>
     <body>
@@ -33,14 +34,16 @@ $title = "Sign up";
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-outline mb-4">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" onkeypress="verifyPassword();" required>
             </div>
             <div class="form-outline mb-4">
-                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required>
+                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" onkeypress="verifyPassword();" required>
             </div>
 
+            <p id="message"></p>
+
             <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit">Sign Up</button>
+                <button class="btn btn-info btn-lg btn-block" type="submit" id="signUpButton">Sign Up</button>
             </div>
             <div class="pt-1 mb-4">
                 <button class="btn btn-info btn-lg btn-block" type="submit">Annuler</button>
@@ -54,6 +57,7 @@ $title = "Sign up";
     </div>
     </body>
     </html>
+
 
 
 <?php
