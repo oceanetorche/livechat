@@ -12,9 +12,9 @@
     <!-- CUSTOMED CSS -->
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body id="homeBody">
 
-<div>
+
 
     <div id="homeLittlewrapper" class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8">
 
@@ -41,16 +41,10 @@
             <?php foreach($arrayChatrooms as $chat){ ?>
             <div id="chatroom" class="chatroom row align-items-center">
                 <div class="col-10">
-                    <h2 id="chatroomTitle"><?php if(isset($chat['name'])) echo $chat['name'];?></h2>
-                    <p id="chatroomDescription"><?php
-                    $nbr=0;
-                    foreach ($arrayPeople as $person){
-                        if($person['Chatroom_id']==$chat['id']){
-                            $nbr++;
-                        }
-                    }
-
-                    if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'];?></p>
+                    <h2 id="chatroomTitle">Test
+                    <p id="chatroomDescription">
+                        -----------------------------------------------------------
+                    </p>
                 </div>
                 <div class="col-2">
                     <a class="btn btn-info btn-block">Connect</a>
@@ -63,9 +57,9 @@
 
 
 
-    </div>
 
-</div>
+
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
