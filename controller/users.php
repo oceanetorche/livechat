@@ -9,8 +9,11 @@
 
 require 'model/userManagement.php';
 
+/**
+ * @brief This function aims to add a user to the DB
+ * @param $data information from form given by user
+ */
 function signup($data){
-    // check infos have been set and if we come from login page
     if(isset($data['firstname']) && isset($data['lastname']) && isset($data['pseudo']) && isset($data['email']) && isset($data['password'])){
         if(addToDB($data)){
             require 'view/login.php';
@@ -24,10 +27,13 @@ function signup($data){
     }
 }
 
+/**
+ * @brief This function aims to log to the chat if the user is in the DB
+ * @param $data information from form given by user
+ */
 function login($data){
     if(isset($data['email']) && isset($data['pwd'])){
         if(checkLogin($data)){
-            updateStatus($_SESSION['id']);
             header("Location: " . 'index.php?action=chatrooms');
         }else{
             $errorMessage = "Email incorrect";
@@ -38,8 +44,12 @@ function login($data){
     }
 }
 
+/**
+ * @brief This function aims to disconnect the user
+ */
 function logout(){
     updateStatus($_SESSION['id']);
+    quitChatroom($_SESSION['id']);
     session_destroy();
     $_SESSION = array();
     require 'view/login.php';

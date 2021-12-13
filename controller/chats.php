@@ -10,6 +10,9 @@
 
 require "model/chatroomManager.php";
 
+/**
+ * @brief This function aims to display the given chatrooms
+ */
 function displayChatrooms(){
     $arrayChatrooms = getChatrooms();
 

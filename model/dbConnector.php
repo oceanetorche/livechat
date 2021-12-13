@@ -9,7 +9,7 @@
 
 /**
  * @brief This function is designed to manage the database connexion. Closing will be not proceeded there. The client is responsible of this.
- * @return PDO|null
+ * @return PDO
  */
 function openDBConnexion()
 {
@@ -33,39 +33,43 @@ function openDBConnexion()
     return $tempDBConnexion;
 }
 
-
+/**
+ * @brief This function executes a select query in DB with parameter
+ * @param $query to execute
+ * @param $params to add to query
+ * @return array|null array of objects or null if no object found
+ */
 function executeQuerySelect($query, $params)
 {
     $queryResult = null;
 
-    //open DB Connection
     $dbConnexion = openDBConnexion();
 
-    //if connection is not null
     if ($dbConnexion != null) {
-        //preparation query
         $statement = $dbConnexion->prepare($query);
 
-        //we execute the request with the parameters used on the query
         $statement -> execute($params);
 
-        //we prepare the results for the navigator
         $queryResult = $statement->fetchAll();
 
     }
-    $dbConnexion = null; // Fermeture de ma connection à la BD*/
+    $dbConnexion = null;
     return $queryResult;
 }
 
+
+/**
+ * @brief This function executes an insert query in DB with parameter
+ * @param $query to execute
+ * @param $param to add to the query
+ * @return int 1 no problem or 0 if problem
+ */
 function executeQueryInsert($query,$param)
 {
     $dbConnexion = openDBConnexion();
 
     if ($dbConnexion != null) {
-
         $statement = $dbConnexion->prepare($query);
-
-        //we execute the request with the parameters used on the query
         $statement -> execute($param);
 
         return 1;

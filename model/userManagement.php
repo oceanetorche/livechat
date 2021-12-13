@@ -11,7 +11,7 @@
 require "dbConnector.php";
 
 /**
- * Adds user to DB
+ * @brief This function adds user to DB
  * @param $data personal data from form
  * @return int 0 if errror 1 if writes in DB
  */
@@ -30,11 +30,10 @@ function addToDB($data){
         return 0;
     }else{
 
-        //open DB Connection
         $dbConnexion = openDBConnexion();
 
         if ($dbConnexion != null) {
-            //preparation query
+
             $statement = $dbConnexion->prepare('INSERT INTO users (firstname, lastname,username,email,password,registration_date,Chatroom_id,Users_states_id) values (:firstname,:lastname,:username,:email,:pwd,:registration,:chat,:status)');
 
             $statement->bindParam(':firstname',$firstname);
@@ -46,7 +45,6 @@ function addToDB($data){
             $statement->bindParam(':chat',$chatroom);
             $statement->bindParam(':status',$status);
 
-            //we execute the request with the parameters used on the query
             $statement -> execute();
 
             return 1;
@@ -61,7 +59,7 @@ function addToDB($data){
 }
 
 /**
- * Checks whether the login matches the DB
+ * @brief This function checks whether the login matches the DB
  * @param $data information from form
  * @return bool true if login is correct, false is login is incorrect
  */
@@ -75,7 +73,6 @@ function checkLogin($data){
 
     $dataDB = executeQuerySelect($query,$params);
 
-
     if($dataDB !=null){
         foreach ($dataDB as $key => $tab){
             foreach ($tab as $key2 => $pw){
@@ -84,7 +81,9 @@ function checkLogin($data){
                     $_SESSION['id'] = $tab['id'];
                     $_SESSION['username'] = $tab['username'];
                     $_SESSION['chatroom'] = $tab['Chatroom_id'];
-                    $_SESSION['status'] = $tab['Users_states_id'];
+                    $_SESSION['status'] = $tab['Users_states_id'];  //from DB
+                    updateStatus($_SESSION['id']); //updates in DB
+                    $_SESSION['status'] = 1;  // means connected
 
                     return true;
                 }else{
@@ -100,7 +99,7 @@ function checkLogin($data){
 
 
 /**
- * Checks if the email already exists in DB
+ * @brief This function checks if the email already exists in DB
  * @param $givenEmail username given in form
  * @return bool true if exists, false if doesn't exist
  */
@@ -120,9 +119,8 @@ function checkEmailAlreadyExists($givenEmail){
 }
 
 
-
 /**
- * Checks if the username already exists in DB
+ * @brief This function checks if the username already exists in DB
  * @param $givenUsername username given in form
  * @return bool true if exists, false if doesn't exist
  */
@@ -142,19 +140,36 @@ function checkUsernameAlreadyExists($givenUsername){
 }
 
 
+/**
+ * @brief This function updates in DB the chatroom number of the user, sets it to null
+ * @param $id of the user
+ */
+function quitChatroom($id)
+{
+    $query = "UPDATE users SET Chatroom_id=null WHERE id=:identity";
+
+    $params = array(':identity' => $id);
+
+    executeQueryInsert($query, $params);
+
+}
+
+/**
+ * @brief This function updates in DB the connexion status of an user
+ * @param $id of the user
+ */
 function updateStatus($id){
 
     if($_SESSION['status']==1){
+
         $query = "UPDATE users SET Users_states_id=2 WHERE id=:identity";
     }else{
+
         $query = "UPDATE users SET Users_states_id=1 WHERE id=:identity";
     }
 
     $params = array (':identity' =>$id);
 
     executeQueryInsert($query,$params);
-
-    return 1;
-
 
 }

@@ -8,50 +8,47 @@
  */
 
 
+/**
+ * @brief This function gets the chatrooms available in the DB
+ * @return array|null
+ */
 function getChatrooms(){
     $queryResult = null;
 
-    //open DB Connection
     $dbConnexion = openDBConnexion();
 
     $query = "SELECT id,name,nb_users_max from chatrooms";
 
     if ($dbConnexion != null) {
-        //preparation query
+
         $statement = $dbConnexion->prepare($query);
-
-        //we execute the request with the parameters used on the query
         $statement -> execute();
-
-        //we prepare the results for the navigator
         $queryResult = $statement->fetchAll();
 
     }
-    $dbConnexion = null; // Fermeture de ma connection à la BD*/
+    $dbConnexion = null;
     return $queryResult;
 }
 
-
+/**
+ * @brief This function gets people connected to a chatroom in DB
+ * @return array|null
+ */
 function getPeopleInChatroom(){
     $nbPeopleInChatroom = null;
 
-    //open DB Connection
     $dbConnexion = openDBConnexion();
 
     $query = "SELECT Chatroom_id from users";
 
     if ($dbConnexion != null) {
-        //preparation query
+
         $statement = $dbConnexion->prepare($query);
-
-        //we execute the request with the parameters used on the query
         $statement -> execute();
-
-        //we prepare the results for the navigator
         $nbPeopleInChatroom = $statement->fetchAll();
 
     }
-    $dbConnexion = null; // Fermeture de ma connection à la BD*/
+    $dbConnexion = null;
 
     return $nbPeopleInChatroom;
 }
