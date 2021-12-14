@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- BOOTSTRAP CSS, JQUERY, JS, COMPILED JAVASCRIPT -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- CUSTOMED CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    .chatscreen {
+      border: red solid 2px;
+    }
+
+    .writemessage-wrapper {
+      display: block;
+    }
+
+  </style>
+
+</head>
+<body id="homeBody">
+
+
+
+
+<div id="homeLittlewrapper" class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8">
+
+  <!-- head  -->
+  <div id="homeHead" class="sticky-top">
+    <h1 id="headUp">
+      WASSAP
+    </h1>
+    <hr style="height: 5px; background-color: white">
+    <div class="d-flex justify-content-between align-items-center" id="headDown">
+      <div class="#">
+        Welcome <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?>
+      </div>
+      <a class="btn btn-danger " href="index.php?action=logout">
+        LOG OUT
+      </a>
+    </div>
+    <hr style="height: 5px; background-color: white">
+  </div>
+
+  <!-- main  -->
+  <div id="homeMain">
+    <div class="chatroom row align-items-center">
+      <div class="col-10">
+        <h2 id="chatroomTitle">Gaming</h2>
+        <p id="chatroomDescription">-------------------------------------------------------------------------------------</p>
+      </div>
+      <div class="col-2">
+        <a class="btn btn-info btn-block" href="index.php?action=connect&id=<?php echo $chat['id']?>">Connect</a>
+      </div>
+
+    </div>
+    <div class="chatscreen row">
+    </div>
+    <div class="writemessage-wrapper row">
+      <input class="writemessage-box" type="text" placeholder="Write message here" />
+    </div>
+    <br>
+    <?php }?>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
