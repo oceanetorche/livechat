@@ -12,6 +12,7 @@ session_start();
 require "controller/controller.php";
 require "controller/users.php";
 require "controller/chats.php";
+require "controller/messages.php";
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
@@ -30,6 +31,9 @@ if (isset($_GET['action'])) {
             break;
         case 'logout':
             logout();
+            break;
+        case 'connect':
+            displayMessages($_GET['id']);
             break;
         default :
             signup($_POST);

@@ -54,7 +54,7 @@ $title = "Home";
                         if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'];?></p>
                 </div>
                 <div class="col-2">
-                    <a class="btn btn-info btn-block">Connect</a>
+                    <a class="btn btn-info btn-block" href="index.php?action=connect&id=<?php echo $chat['id']?>">Connect</a>
                 </div>
 
             </div>
@@ -63,10 +63,6 @@ $title = "Home";
 
         </div>
     </div>
-
-
-
-
 
 
 
