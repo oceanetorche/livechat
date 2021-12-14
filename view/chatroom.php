@@ -81,7 +81,7 @@ $title = "Chatroom";
 
                 </div>
                 <div class="form-outline mb-4">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    <input type="texr" class="form-control" id="writeMessageHere" name="writeMessageHere" placeholder="Write Message Here">
                 </div>
 
             </div>
