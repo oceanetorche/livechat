@@ -16,26 +16,6 @@ $title = "Chatroom";
 <html>
 
 
-<body>
-    <?php
-
-    foreach ($messages as $msg){
-        echo $msg[0] . " " . $msg[1];
-    }
-
-    ?>
-
-
-
-
-
-
-</body>
-</html>
-
-
-
-<html>
 <body id="homeBody">
 
 <div id="homeLittlewrapper" class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8">
@@ -60,33 +40,45 @@ $title = "Chatroom";
 
     <!-- main  -->
     <div id="homeMain">
-        <?php foreach ($arrayChatrooms as $chat) { ?>
+
             <div class="chatroom row align-items-center">
                 <div class="col-10">
-                    <h2 id="chatroomTitle"><?php if (isset($chat['name'])) echo $chat['name']; ?></h2>
+                    <h2 id="chatroomTitle"><?php if (isset($chatroom['name'])) echo $chatroom['name']; ?></h2>
                     <p id="chatroomDescription"><?php
                         $nbr = 0;
                         foreach ($arrayPeople as $person) {
-                            if ($person['Chatroom_id'] == $chat['id']) {
+                            if ($person['Chatroom_id'] == $chatroom['id']) {
                                 $nbr++;
                             }
                         }
 
-                        if (isset($chat['nb_users_max'])) echo $nbr . " / " . $chat['nb_users_max']; ?></p>
+                        if (isset($chat['nb_users_max'])) echo $nbr . " / " . $chatroom['nb_users_max']; ?></p>
                 </div>
                 <div class="col-2">
                     <a class="btn btn-info btn-block">Disconnect</a>
                 </div>
-                <div>
 
-                </div>
-                <div class="form-outline mb-4">
+                <div class="col-12" style="background-color:yellow;">
+                    <?php
+                    if(isset($messages)){
+                        foreach ($messages as $msg){
+                            echo $msg[0] . " " . $msg[1];
+                        }
+                    }
+
+
+                    echo'<div class="form-outline mb-4">
                     <input type="texr" class="form-control" id="writeMessageHere" name="writeMessageHere" placeholder="Write Message Here">
+                </div>';
+
+
+                    ?>
                 </div>
 
             </div>
             <br>
-        <?php } ?>
+
+
 
     </div>
 </div>
@@ -94,5 +86,5 @@ $title = "Chatroom";
 <?php
 $content = ob_get_clean();
 
-require "home.php";
+require "gabarit.php";
 ?>

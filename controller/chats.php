@@ -23,6 +23,14 @@ function displayChatrooms(){
 function displayMessages($id){
     $messages = getMessage($id);
     $arrayChatrooms = getChatrooms();
+
+
+    foreach ($arrayChatrooms as $chat){
+        if($chat['id']==$id){
+            $chatroom = $chat;
+        }
+    }
+
     $arrayPeople = getPeopleInChatroom();
     require "view/chatroom.php";
 }
