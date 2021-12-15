@@ -42,7 +42,7 @@ $title = "Chatroom";
     <div id="homeMain">
 
             <div class="chatroom row align-items-center">
-                <div class="col-10">
+                <div class="col-8 col-sm-9">
                     <h2 id="chatroomTitle"><?php if (isset($chatroom['name'])) echo $chatroom['name']; ?></h2>
                     <p id="chatroomDescription"><?php
                         $nbr = 0;
@@ -54,7 +54,7 @@ $title = "Chatroom";
 
                         if (isset($chat['nb_users_max'])) echo $nbr . " / " . $chatroom['nb_users_max']; ?></p>
                 </div>
-                <div class="col-2">
+                <div class="col-4 col-sm-3">
                     <a class="btn btn-info btn-block">Disconnect</a>
                 </div>
 
