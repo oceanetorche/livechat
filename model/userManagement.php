@@ -173,3 +173,15 @@ function updateStatus($id){
     executeQueryInsert($query,$params);
 
 }
+
+
+function updateUserChatroom($chatroomId){
+
+    $query = "UPDATE users SET Chatroom_id=:chatRoomId WHERE id=:identity";
+
+
+    $params = array (':identity' =>$_SESSION['id'],':chatRoomId' =>$chatroomId);
+
+    executeQueryInsert($query,$params);
+
+}
