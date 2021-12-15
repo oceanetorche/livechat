@@ -62,7 +62,9 @@ $title = "Chatroom";
                     <?php
                     if(isset($messages)){
                         foreach ($messages as $msg){
-                            echo $msg[0] . " " . $msg[1];
+                            echo '<div style="background-color:white;border: 1px black solid;">';
+                            echo $msg[2] . " " .  " " . $msg[1] . "<br> " . $msg[0] ;
+                            echo '</div>';
                         }
                     }
 
