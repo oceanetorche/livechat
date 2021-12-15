@@ -12,7 +12,6 @@ session_start();
 require "controller/controller.php";
 require "controller/users.php";
 require "controller/chats.php";
-require "controller/messages.php";
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];

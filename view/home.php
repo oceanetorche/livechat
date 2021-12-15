@@ -41,7 +41,7 @@ $title = "Home";
         <div id="homeMain">
             <?php foreach($arrayChatrooms as $chat){ ?>
             <div class="chatroom row align-items-center">
-                <div class="col-10">
+                <div class="col-8 col-sm-9">
                     <h2 id="chatroomTitle"><?php if(isset($chat['name'])) echo $chat['name'];?></h2>
                     <p id="chatroomDescription"><?php
                         $nbr=0;
@@ -53,7 +53,7 @@ $title = "Home";
 
                         if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'];?></p>
                 </div>
-                <div class="col-2">
+                <div class="col-4 col-sm-3">
                     <a class="btn btn-info btn-block" href="index.php?action=connect&id=<?php echo $chat['id']?>">Connect</a>
                 </div>
 
