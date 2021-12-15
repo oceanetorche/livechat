@@ -55,7 +55,7 @@ $title = "Chatroom";
                         if (isset($chat['nb_users_max'])) echo $nbr . " / " . $chatroom['nb_users_max']; ?></p>
                 </div>
                 <div class="col-4 col-sm-3">
-                    <a class="btn btn-info btn-block">Disconnect</a>
+                    <a class="btn btn-info btn-block" href="index.php?action=disconnect">Disconnect</a>
                 </div>
 
                 <div class="col-12" style="background-color:yellow;">

@@ -32,7 +32,11 @@ if (isset($_GET['action'])) {
             logout();
             break;
         case 'connect':
+            updateChatroom($_GET['id']);
             displayMessages($_GET['id']);
+            break;
+        case 'disconnect':
+            updateChatroom(null);
             break;
         default :
             signup($_POST);
