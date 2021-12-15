@@ -1,6 +1,4 @@
 
-
-
 function verifyPassword(){
     const password  = document.getElementById("password").value;
     const confirmPassword  = document.getElementById("confirmpassword").value;
@@ -38,5 +36,21 @@ function verifyPassword(){
     }
     if (passwordMinLength === true && passwordMaxLength === true && passwordSame === true) {
         document.getElementById("signUpButton").disabled = false;
+    }
+}
+
+function allLetter()
+{
+    var letters = /^[A-Za-z]+$/;
+    var firsName = document.getElementById('firstname');
+    var lastName = document.getElementById('lastname');
+
+    if((firsName.value.match(letters)) && (lastName.value.match(letters)))
+    {
+        document.getElementById("message").innerHTML = "Firstname and lastname letters only";
+    }
+    else
+    {
+        document.getElementById("message").innerHTML = "";
     }
 }
