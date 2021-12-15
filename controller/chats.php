@@ -15,8 +15,14 @@ require "model/chatroomManager.php";
  */
 function displayChatrooms(){
     $arrayChatrooms = getChatrooms();
-
     $arrayPeople = getPeopleInChatroom();
     require "view/home.php";
 
+}
+
+function displayMessages($id){
+    $messages = getMessage($id);
+    $arrayChatrooms = getChatrooms();
+    $arrayPeople = getPeopleInChatroom();
+    require "view/chatroom.php";
 }
