@@ -54,3 +54,12 @@ function logout(){
     $_SESSION = array();
     require 'view/login.php';
 }
+
+
+function updateChatroom($chatroomId){
+    updateUserChatroom($chatroomId);
+    if($chatroomId==null){
+        header("Location: " . 'index.php?action=chatrooms');
+    }
+
+}
