@@ -22,10 +22,12 @@ $title = "Sign up";
 
 
             <div class="form-outline mb-4">
-                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname" required>
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname"
+                       pattern="^[a-zA-Z]+$" oninvalid="this.setCustomValidity('Letters only')"
+                       oninput="this.setCustomValidity('')" required>
             </div>
             <div class="form-outline mb-4">
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" required>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" pattern="^[a-zA-Z]+$" required>
             </div>
             <div class="form-outline mb-4">
                 <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Username" required>
@@ -34,10 +36,14 @@ $title = "Sign up";
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-outline mb-4">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password" onkeypress="verifyPassword();" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                       minlength="10" maxlength="20" oninvalid="verifyPassword()"
+                       oninput="this.setCustomValidity('')" required>
             </div>
             <div class="form-outline mb-4">
-                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" onkeypress="verifyPassword();" required>
+                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password"
+                       minlength="10" maxlength="20" oninvalid="verifyPassword()"
+                       oninput="this.setCustomValidity('')" required>
             </div>
 
             <p id="message"></p>
@@ -57,8 +63,6 @@ $title = "Sign up";
     </div>
     </body>
     </html>
-
-
 
 <?php
 $content = ob_get_clean();
