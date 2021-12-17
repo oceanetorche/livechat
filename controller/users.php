@@ -55,7 +55,10 @@ function logout(){
     require 'view/login.php';
 }
 
-
+/**
+ * @brief This function aims to update chatroom in which the user is
+ * @param $chatroomId id of the chatroom in which the user is connected
+ */
 function updateChatroom($chatroomId){
     updateUserChatroom($chatroomId);
     if($chatroomId==null){

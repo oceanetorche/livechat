@@ -54,14 +54,14 @@ function getPeopleInChatroom(){
 }
 
 
-
+/**
+ * @brief This function gets the message of a chatroom in DB
+ * @param $id
+ * @return array|null
+ */
 function getMessage($id){
     $queryResult = null;
     $dbConnexion = openDBConnexion();
-
-
-
-    //SELECT  FROM messages LEFT JOIN users ON users.id = messages.User_id;
 
     $query = "SELECT messages.content, messages.sending_timestamp, users.username FROM messages LEFT JOIN users ON users.id = messages.User_id WHERE messages.Chatroom_id =" . $id ."";
 

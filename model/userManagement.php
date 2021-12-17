@@ -174,11 +174,13 @@ function updateStatus($id){
 
 }
 
-
+/**
+ * @brief This function updates in DB the chatroom number of an user
+ * @param $chatroomId id of the chatroom in which the user is connected
+ */
 function updateUserChatroom($chatroomId){
 
     $query = "UPDATE users SET Chatroom_id=:chatRoomId WHERE id=:identity";
-
 
     $params = array (':identity' =>$_SESSION['id'],':chatRoomId' =>$chatroomId);
 
