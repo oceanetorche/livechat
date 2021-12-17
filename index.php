@@ -35,6 +35,9 @@ if (isset($_GET['action'])) {
             updateChatroom($_GET['id']);
             displayMessages($_GET['id']);
             break;
+        case 'updateMessage':
+            updateMessage($_POST,$_GET);
+            break;
         case 'disconnect':
             updateChatroom(null);
             break;
