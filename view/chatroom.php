@@ -69,9 +69,17 @@ $title = "Chatroom";
                     }
 
 
-                    echo'<div class="form-outline mb-4">
-                    <input type="texr" class="form-control" id="writeMessageHere" name="writeMessageHere" placeholder="Write Message Here">
-                </div>';
+                    echo'
+                                                                                       
+                        <form id="formChatroom" method="post" action="index.php?action=updateMessage&chatid='.$chatroom["id"].'&userid='.$_SESSION["id"].'">
+                            <div class="form-outline mb-4">
+                                <input type="texr" class="form-control" id="writeMessageHere" name="writeMessageHere" placeholder="Write Message Here">
+                            </div>
+                               <div class="col-4 col-sm-3">
+                                <button class="btn btn-info btn-lg btn-block" type="submit">Envoyer</button>
+                              </div>
+                            
+                        </form>';
 
 
                     ?>
