@@ -34,3 +34,8 @@ function displayMessages($id){
     $arrayPeople = getPeopleInChatroom();
     require "view/chatroom.php";
 }
+
+function updateMessage($messages,$info){
+    updateMessageInDB($messages,$info);
+    displayMessages($info['chatid']);
+}
