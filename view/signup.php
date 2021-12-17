@@ -44,8 +44,6 @@ $title = "Sign up";
                        onkeypress="verifyPassword();" required>
             </div>
 
-
-
             <div class="pt-1 mb-4">
                 <button class="btn btn-info btn-lg btn-block" type="submit" id="signUpButton">Sign Up</button>
             </div>
@@ -67,18 +65,20 @@ $title = "Sign up";
 <script>
     function verifyPassword() {
         {
-            var message = document.getElementById("message");
             var password  = document.getElementById("password").value;
             var confirmpassword  = document.getElementById("confirmpassword").value;
 
             if(password !== confirmpassword){
-                document.getElementById("signUpButton").disabled = true;
-                message.innerHTML("Entered Password is not matching!! Try Again");
-            }else{
-                document.getElementById("signUpButton").disabled = false;
-                message.innerHTML("");
+                document.getElementById('confirmpassword').oninvalid = function () {invalidPasswordMessage()};
+                document.getElementById('signUpButton').disabled = true;
+            } else {
+                document.getElementById('signUpButton').disabled = false;
             }
         }
+    }
+
+    function invalidPasswordMessage() {
+        alert("Password dont match");
     }
 </script>
 
