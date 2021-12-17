@@ -5,9 +5,6 @@ function verifyPassword(){
 
     //verifyConfirmPassword
     if(password !== confirmPassword){
-        document.getElementById("message").innerHTML = "Password doesn't match";
-        passwordMinLength === true;
-    } else{
-        document.getElementById("message").innerHTML = "";
+        document.getElementById("message").setCustomValidity("Passwords don't match");
     }
 }

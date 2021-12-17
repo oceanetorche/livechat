@@ -42,7 +42,7 @@ $title = "Sign up";
             </div>
             <div class="form-outline mb-4">
                 <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password"
-                       minlength="10" maxlength="20" oninvalid="verifyPassword()"
+                       minlength="8" maxlength="20" oninvalid="verifyPassword()"
                        oninput="this.setCustomValidity('')" required>
             </div>
 
