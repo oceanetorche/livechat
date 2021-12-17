@@ -37,16 +37,14 @@ $title = "Sign up";
             </div>
             <div class="form-outline mb-4">
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password"
-                       minlength="8" maxlength="20" oninvalid="verifyPassword()"
-                       oninput="this.setCustomValidity('')" required>
+                       minlength="8" maxlength="20" onkeypress="verifyPassword();" required>
             </div>
             <div class="form-outline mb-4">
                 <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password"
-                       minlength="8" maxlength="20" oninvalid="verifyPassword()"
-                       oninput="this.setCustomValidity('')" required>
+                       onkeypress="verifyPassword();" required>
             </div>
 
-            <p id="message"></p>
+
 
             <div class="pt-1 mb-4">
                 <button class="btn btn-info btn-lg btn-block" type="submit" id="signUpButton">Sign Up</button>
@@ -54,6 +52,8 @@ $title = "Sign up";
             <div class="pt-1 mb-4">
                 <button class="btn btn-info btn-lg btn-block" type="submit">Annuler</button>
             </div>
+
+            <p id="message"></p>
 
             <?php if(isset($errorMessage)) {?>
             <p class="alert alert-danger"> <?php echo $errorMessage; }?></p>
@@ -63,6 +63,24 @@ $title = "Sign up";
     </div>
     </body>
     </html>
+
+<script>
+    function verifyPassword() {
+        {
+            var message = document.getElementById("message");
+            var password  = document.getElementById("password").value;
+            var confirmpassword  = document.getElementById("confirmpassword").value;
+
+            if(password !== confirmpassword){
+                document.getElementById("signUpButton").disabled = true;
+                message.innerHTML("Entered Password is not matching!! Try Again");
+            }else{
+                document.getElementById("signUpButton").disabled = false;
+                message.innerHTML("");
+            }
+        }
+    }
+</script>
 
 <?php
 $content = ob_get_clean();
