@@ -45,6 +45,18 @@ function executeQuerySelect($query, $params)
 
     $dbConnexion = openDBConnexion();
 
+    if ($params == null) {
+        $statement = $dbConnexion->prepare($query);
+
+        $statement -> execute();
+
+        $queryResult = $statement->fetchAll();
+
+        $dbConnexion = null;
+        return $queryResult;
+    }
+
+
     if ($dbConnexion != null) {
         $statement = $dbConnexion->prepare($query);
 
