@@ -68,6 +68,15 @@ function executeQueryInsert($query,$param)
 {
     $dbConnexion = openDBConnexion();
 
+    if ($param == null) {
+        $statement = $dbConnexion->prepare($query);
+        $statement -> execute();
+
+        return 1;
+
+    }
+
+
     if ($dbConnexion != null) {
         $statement = $dbConnexion->prepare($query);
         $statement -> execute($param);
