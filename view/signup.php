@@ -7,6 +7,7 @@
  * @version   23.11.2021
  */
 
+require "js/verifyPassword.js";
 ob_start();
 $title = "Sign up";
 
@@ -17,44 +18,103 @@ $title = "Sign up";
     <div id="formWrapper">
 
         <form id="formSignUp" method="post" action="index.php?action=signup">
-            <h1>WASSAP</h1>
-            <h3>Inscrivez-vous</h3>
 
+            <!-- Title -->
+            <h1>
+                WASSAP
+            </h1>
 
+            <!-- Subtitle -->
+            <h3>
+                Inscrivez-vous
+            </h3>
+
+            <!-- Firstname -->
             <div class="form-outline mb-4">
-                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname"
-                       pattern="^[a-zA-Z]+$" oninvalid="this.setCustomValidity('Letters only')"
-                       oninput="this.setCustomValidity('')" required>
-            </div>
-            <div class="form-outline mb-4">
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" pattern="^[a-zA-Z]+$" required>
-            </div>
-            <div class="form-outline mb-4">
-                <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Username" required>
-            </div>
-            <div class="form-outline mb-4">
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-outline mb-4">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
-                       minlength="8" maxlength="20" onkeypress="verifyPassword();" required>
-            </div>
-            <div class="form-outline mb-4">
-                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password"
-                       onkeypress="verifyPassword();" required>
+                <input type="text"
+                       class="form-control"
+                       id="firstname"
+                       name="firstname"
+                       placeholder="Firstname"
+                       pattern="^[a-zA-Z\u00C0-\u00FF]*$"
+                       oninvalid="this.setCustomValidity('Letters only')"
+                       oninput="this.setCustomValidity('')"
+                       required>
             </div>
 
+            <!-- Lastname -->
+            <div class="form-outline mb-4">
+                <input type="text"
+                       class="form-control"
+                       id="lastname"
+                       name="lastname"
+                       placeholder="Lastname"
+                       pattern="^[a-zA-Z\u00C0-\u00FF]*$"
+                       oninvalid="this.setCustomValidity('Letters only')"
+                       oninput="this.setCustomValidity('')"
+                       required>
+            </div>
+
+            <!-- Username -->
+            <div class="form-outline mb-4">
+                <input type="text"
+                       class="form-control"
+                       id="pseudo"
+                       name="pseudo"
+                       placeholder="Username"
+                       required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-outline mb-4">
+                <input type="email"
+                       class="form-control"
+                       id="email" name="email"
+                       placeholder="Email"
+                       required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-outline mb-4">
+                <input type="password"
+                       class="form-control"
+                       id="password"
+                       name="password"
+                       placeholder="Password"
+                       minlength="8"
+                       maxlength="20"
+                       onchange="verifyPassword();"
+                       required>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-outline mb-4">
+                <input type="password"
+                       class="form-control"
+                       id="confirmpassword"
+                       name="confirmpassword"
+                       placeholder="Confirm Password"
+                       onchange="verifyPassword();"
+                       required>
+            </div><br>
+
+            <!-- SignUp button -->
             <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit" id="signUpButton">Sign Up</button>
+                <button class="btn btn-info btn-lg btn-block" type="submit" id="signUpButton">
+                    Sign Up
+                </button>
             </div>
+
+            <!-- Cancel Button -->
             <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit">Annuler</button>
+                <button class="btn btn-info btn-lg btn-block" type="submit">
+                    Cancel
+                </button>
             </div>
 
-            <p id="message"></p>
-
-            <?php if(isset($errorMessage)) {?>
-            <p class="alert alert-danger"> <?php echo $errorMessage; }?></p>
+            <?php if (isset($errorMessage)) { ?>
+            <p class="alert alert-danger"> <?php echo $errorMessage;
+                } ?></p>
 
         </form>
 
@@ -65,22 +125,19 @@ $title = "Sign up";
 <script>
     function verifyPassword() {
         {
-            var password  = document.getElementById("password").value;
-            var confirmpassword  = document.getElementById("confirmpassword").value;
+            var password  = document.getElementById("password");
+            var confirmpassword  = document.getElementById("confirmpassword");
 
-            if(password !== confirmpassword){
-                document.getElementById('confirmpassword').oninvalid = function () {invalidPasswordMessage()};
-                document.getElementById('signUpButton').disabled = true;
+            if(password.value !== confirmpassword.value){
+                confirmpassword.setCustomValidity("Passwords don't match")
             } else {
-                document.getElementById('signUpButton').disabled = false;
+                confirmpassword.setCustomValidity("")
             }
         }
     }
-
-    function invalidPasswordMessage() {
-        alert("Password dont match");
-    }
 </script>
+
+
 
 <?php
 $content = ob_get_clean();
