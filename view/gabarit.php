@@ -20,6 +20,7 @@
 
     <!-- CUSTOMED CSS -->
     <link rel="stylesheet" href="view/css/main.css">
+    <link rel="stylesheet" type="text/css" href="view/content/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>

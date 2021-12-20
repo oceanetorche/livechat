@@ -28,7 +28,11 @@ $title = "Home";
             <div class="d-flex justify-content-between align-items-center" id="headDown">
                 <div class="#">
                     Welcome <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?>
+                    <a >
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
                 </div>
+
                 <a class="btn btn-danger " href="index.php?action=logout">
                     LOG OUT
                 </a>
@@ -51,7 +55,7 @@ $title = "Home";
                             }
                         }
 
-                        if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'];?></p>
+                        if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'] . " ";?><i class="fa fa-user" aria-hidden="true"></i></p>
                 </div>
                 <div class="col-4 col-sm-3">
                     <a class="btn btn-info btn-block" href="index.php?action=connect&id=<?php echo $chat['id']?>">Connect</a>
