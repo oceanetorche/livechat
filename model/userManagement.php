@@ -30,29 +30,10 @@ function addToDB($data){
         return 0;
     }else{
 
-        $dbConnexion = openDBConnexion();
-
-        if ($dbConnexion != null) {
-
-            $statement = $dbConnexion->prepare('INSERT INTO users (firstname, lastname,username,email,password,registration_date,Chatroom_id,Users_states_id) values (:firstname,:lastname,:username,:email,:pwd,:registration,:chat,:status)');
-
-            $statement->bindParam(':firstname',$firstname);
-            $statement->bindParam(':lastname',$lastname);
-            $statement->bindParam(':username',$username);
-            $statement->bindParam(':email',$email);
-            $statement->bindParam(':pwd',$pwd);
-            $statement->bindParam(':registration',$registration);
-            $statement->bindParam(':chat',$chatroom);
-            $statement->bindParam(':status',$status);
-
-            $statement -> execute();
-
-            return 1;
-
-        }
-        $dbConnexion = null;
-
-        return 0;
+        $query = "INSERT INTO users (firstname, lastname,username,email,password,registration_date,Chatroom_id,Users_states_id) values (:firstname,:lastname,:username,:email,:pwd,:registration,:chat,:status)";
+        $params = array(':firstname'=>$firstname,':lastname'=>$lastname,':username'=>$username,':email'=>$email,':pwd'=>$pwd,':registration'=>$registration,':chat'=>$chatroom,':status'=>$status);
+        executeQueryInsert($query, $params);
+        return 1;
     }
 
 
@@ -147,9 +128,7 @@ function checkUsernameAlreadyExists($givenUsername){
 function quitChatroom($id)
 {
     $query = "UPDATE users SET Chatroom_id=null WHERE id=:identity";
-
     $params = array(':identity' => $id);
-
     executeQueryInsert($query, $params);
 
 }
@@ -181,9 +160,7 @@ function updateStatus($id){
 function updateUserChatroom($chatroomId){
 
     $query = "UPDATE users SET Chatroom_id=:chatRoomId WHERE id=:identity";
-
     $params = array (':identity' =>$_SESSION['id'],':chatRoomId' =>$chatroomId);
-
     executeQueryInsert($query,$params);
 
 }

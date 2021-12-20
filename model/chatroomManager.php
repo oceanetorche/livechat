@@ -15,9 +15,7 @@
 function getChatrooms(){
 
     $query = "SELECT id,name,nb_users_max from chatrooms";
-
     $params = null;
-
     $queryResult = executeQuerySelect($query,$params);
     return $queryResult;
 
@@ -30,9 +28,7 @@ function getChatrooms(){
 function getPeopleInChatroom(){
 
     $query = "SELECT Chatroom_id from users";
-
     $params = null;
-
     $nbPeopleInChatroom = executeQuerySelect($query,$params);
 
     return $nbPeopleInChatroom;
@@ -47,12 +43,8 @@ function getPeopleInChatroom(){
 function getMessage($id){
 
     $query = "SELECT messages.content, messages.sending_timestamp, users.username FROM messages LEFT JOIN users ON users.id = messages.User_id WHERE messages.Chatroom_id =:id";
-
-
     $params = array (':id' =>$id);
-
     $queryResult = executeQuerySelect($query,$params);
-
 
     return $queryResult;
 }
@@ -64,9 +56,7 @@ function updateMessageInDB($message,$info){
     $user = $info['userid'];
     $chat = $info['chatid'];
 
-
     $query = "INSERT INTO messages (content,sending_timestamp,User_id,Chatroom_id) VALUES (:content,NOW(),:uid,:cid)";
-
     $params = array (':content' =>$content,':uid' => $user, ':cid' =>$chat);
 
     executeQueryInsert($query, $params);
