@@ -48,11 +48,15 @@ function login($data){
  * @brief This function aims to disconnect the user
  */
 function logout(){
-    updateStatus($_SESSION['id']);
-    quitChatroom($_SESSION['id']);
-    session_destroy();
-    $_SESSION = array();
-    require 'view/login.php';
+    if(isset($_SESSION['id'])){
+        updateStatus($_SESSION['id']);
+        quitChatroom($_SESSION['id']);
+        session_destroy();
+        $_SESSION = array();
+        require 'view/login.php';
+    }else {
+        require 'view/login.php';
+    }
 }
 
 /**
