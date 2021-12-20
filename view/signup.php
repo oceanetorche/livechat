@@ -7,7 +7,6 @@
  * @version   23.11.2021
  */
 
-require "js/verifyPassword.js";
 ob_start();
 $title = "Sign up";
 
@@ -100,10 +99,12 @@ $title = "Sign up";
 
             <!-- SignUp button -->
             <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit" id="signUpButton">
+                <button class="btn btn-info btn-lg btn-block" type="submit" id="signUpButton"">
                     Sign Up
                 </button>
             </div>
+
+
 
             <!-- Cancel Button -->
             <div class="pt-1 mb-4">
@@ -118,26 +119,13 @@ $title = "Sign up";
 
         </form>
 
+
     </div>
     </body>
     </html>
 
-<script>
-    function verifyPassword() {
-        {
-            var password  = document.getElementById("password");
-            var confirmpassword  = document.getElementById("confirmpassword");
 
-            if(password.value !== confirmpassword.value){
-                confirmpassword.setCustomValidity("Passwords don't match")
-            } else {
-                confirmpassword.setCustomValidity("")
-            }
-        }
-    }
-</script>
-
-
+    <script type="text/javascript" src="js/verifyPassword.js"></script>
 
 <?php
 $content = ob_get_clean();

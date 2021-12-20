@@ -40,6 +40,9 @@ $title = "Login";
     </body>
     </html>
 
+    <script type="text/javascript" src="js/verifyPassword.js"></script>
+
+
 
 <?php
 $content = ob_get_clean();

@@ -1,5 +1,3 @@
-/*
-
 function verifyPassword() {
     {
         var password  = document.getElementById("password");
@@ -12,5 +10,3 @@ function verifyPassword() {
         }
     }
 }
-
-*/
