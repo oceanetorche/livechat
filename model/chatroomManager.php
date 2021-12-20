@@ -37,7 +37,7 @@ function getPeopleInChatroom(){
 
 /**
  * @brief This function gets the message of a chatroom in DB
- * @param $id
+ * @param $id chatroom
  * @return array|null
  */
 function getMessage($id){
@@ -49,7 +49,11 @@ function getMessage($id){
     return $queryResult;
 }
 
-
+/**
+ * @brief This function add messages from chatroom in DB
+ * @param $message written by user
+ * @param $info user and chatroom
+ */
 function updateMessageInDB($message,$info){
 
     $content = $message['writeMessageHere'];
@@ -62,3 +66,5 @@ function updateMessageInDB($message,$info){
     executeQueryInsert($query, $params);
 
 }
+
+function delete(){}
