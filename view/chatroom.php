@@ -29,7 +29,7 @@ $title = "Chatroom";
         <div class="d-flex justify-content-between align-items-center" id="headDown">
             <div class="#">
                 Welcome <?php if (isset($_SESSION['username'])) echo $_SESSION['username']; ?>
-                <a >
+                <a class="btn" href="index.php?action=modify">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </a>
             </div>

@@ -44,6 +44,23 @@ function login($data){
     }
 }
 
+
+function modify($data){
+    quitChatroom($_SESSION['id']);
+    if(isset($data['username'])){
+        if(checkUsernameAlreadyExists($data['username'])){
+            $errorMessage = "Username déjà utilisé ";
+            require 'view/modify.php';
+        }else{
+            updateUsername($data['username']);
+            $_SESSION['username'] = $data['username'];
+            header("Location: " . 'index.php?action=chatrooms');
+        }
+    }else {
+        require 'view/modify.php';
+    }
+}
+
 /**
  * @brief This function aims to disconnect the user
  */

@@ -12,8 +12,8 @@ $title = "Home";
 
 ?>
 
-<html>
-<body id="homeBody">
+    <html>
+    <body id="homeBody">
 
 
 
@@ -41,37 +41,29 @@ $title = "Home";
         </div>
 
 
-        <!-- main  -->
-        <div id="homeMain">
-            <?php foreach($arrayChatrooms as $chat){ ?>
-            <div class="chatroom row align-items-center">
-                <div class="col-8 col-sm-9">
-                    <h2 id="chatroomTitle"><?php if(isset($chat['name'])) echo $chat['name'];?></h2>
-                    <p id="chatroomDescription"><?php
-                        $nbr=0;
-                        foreach ($arrayPeople as $person){
-                            if($person['Chatroom_id']==$chat['id']){
-                                $nbr++;
-                            }
-                        }
+        <!-- FORM  -->
 
-                        if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'] . " ";?><i class="fa fa-user" aria-hidden="true"></i></p>
-                </div>
-                <div class="col-4 col-sm-3">
-                    <a class="btn btn-info btn-block" href="index.php?action=connect&id=<?php echo $chat['id']?>">Connect</a>
-                </div>
+        <form id="formLogin" method="post" action="index.php?action=modify">
 
+            <h13>Change username </h13>
+            <div class="form-outline mb-4">
+                <input type="text" class="form-control" name="username" placeholder="Username">
             </div>
-                <br>
-            <?php }?>
 
-        </div>
+            <div class="pt-1 mb-4">
+                <button class="btn btn-info btn-lg btn-block" type="submit">Confirm</button>
+            </div>
+            <?php if(isset($errorMessage)) {?>
+            <p class="alert alert-danger"> <?php echo $errorMessage; }?></p>
+
+        </form>
+
     </div>
 
 
 
-</body>
-</html>
+    </body>
+    </html>
 
 
 <?php

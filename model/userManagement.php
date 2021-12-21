@@ -164,3 +164,15 @@ function updateUserChatroom($chatroomId){
     executeQueryInsert($query,$params);
 
 }
+
+/**
+ * @brief This function updates in DB the chatroom number of an user
+ * @param $chatroomId id of the chatroom in which the user is connected
+ */
+function updateUsername($username){
+
+    $query = "UPDATE users SET username=:username WHERE id=:identity";
+    $params = array (':username' =>$username,':identity' =>$_SESSION['id']);
+    executeQueryUpdate($query,$params);
+
+}
