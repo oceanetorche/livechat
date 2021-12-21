@@ -100,3 +100,28 @@ function executeQueryInsert($query,$param)
 
     return 0;
 }
+
+
+
+
+/**
+ * @brief This function executes an update query in DB with parameter
+ * @param $query to execute
+ * @param $param to add to the query
+ * @return int 1 no problem or 0 if problem
+ */
+function executeQueryUpdate($query,$param)
+{
+    $dbConnexion = openDBConnexion();
+
+    if ($dbConnexion != null) {
+        $statement = $dbConnexion->prepare($query);
+        $statement -> execute($param);
+
+        return 1;
+
+    }
+    $dbConnexion = null;
+
+    return 0;
+}
