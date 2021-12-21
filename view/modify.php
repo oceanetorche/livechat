@@ -45,12 +45,13 @@ $title = "Home";
 
         <form id="formLogin" method="post" action="index.php?action=modify">
 
+            <h13>Change username </h13>
             <div class="form-outline mb-4">
                 <input type="text" class="form-control" name="username" placeholder="Username">
             </div>
 
             <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+                <button class="btn btn-info btn-lg btn-block" type="submit">Confirm</button>
             </div>
             <?php if(isset($errorMessage)) {?>
             <p class="alert alert-danger"> <?php echo $errorMessage; }?></p>
