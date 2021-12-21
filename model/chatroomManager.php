@@ -42,6 +42,7 @@ function getPeopleInChatroom(){
  */
 function getMessage($id){
 
+    delete();
     $query = "SELECT messages.content, messages.sending_timestamp, users.username FROM messages LEFT JOIN users ON users.id = messages.User_id WHERE messages.Chatroom_id =:id";
     $params = array (':id' =>$id);
     $queryResult = executeQuerySelect($query,$params);
@@ -55,7 +56,6 @@ function getMessage($id){
  * @param $info user and chatroom
  */
 function updateMessageInDB($message,$info){
-
     $content = $message['writeMessageHere'];
     $user = $info['userid'];
     $chat = $info['chatid'];
@@ -67,4 +67,12 @@ function updateMessageInDB($message,$info){
 
 }
 
-function delete(){}
+/**
+ * @brief This function delete messages after 24h in DB
+ */
+function delete(){
+    $query = "DELETE FROM messages WHERE sending_timestamp<=NOW()-interval 1 day";
+    $params = null;
+
+    executeQueryInsert($query, $params);
+}

@@ -125,3 +125,34 @@ function executeQueryUpdate($query,$param)
 
     return 0;
 }
+
+
+/**
+ * @brief This function executes a delete query in DB with parameter
+ * @param $query to execute
+ * @param $param to add to the query if not null
+ * @return int 1 no problem or 0 if problem
+ */
+function executeQueryDelete($query,$param)
+{
+    $dbConnexion = openDBConnexion();
+
+    if ($param == null) {
+        $statement = $dbConnexion->prepare($query);
+        $statement -> execute();
+
+        return 1;
+
+    }
+
+    if ($dbConnexion != null) {
+        $statement = $dbConnexion->prepare($query);
+        $statement -> execute($param);
+
+        return 1;
+
+    }
+    $dbConnexion = null;
+
+    return 0;
+}
