@@ -45,39 +45,40 @@ $title = "Chatroom";
     <!-- main  -->
     <div id="homeMain">
 
-            <div class="chatroom row align-items-center">
-                <div class="col-8 col-sm-9">
-                    <h2 id="chatroomTitle"><?php if (isset($chatroom['name'])) echo $chatroom['name']; ?></h2>
-                    <p id="chatroomDescription"><?php
-                        $nbr = 0;
-                        foreach ($arrayPeople as $person) {
-                            if ($person['Chatroom_id'] == $chatroom['id']) {
-                                $nbr++;
-                            }
-                        }
-
-                        if (isset($chat['nb_users_max'])) echo $nbr . " / " . $chatroom['nb_users_max']." ";?><i class="fa fa-user" aria-hidden="true"></i></p>
-                </div>
-                <div class="col-4 col-sm-3">
-                    <a class="btn btn-info btn-block" href="index.php?action=disconnect">Disconnect</a>
-                </div>
-
-                <div class="col-12" style="background-color:yellow;">
-                    <?php
-                    if(isset($messages)){
-                        foreach ($messages as $msg){
-                            echo '<div style="background-color:white;border: 1px black solid;">';
-                            echo $msg[2] . " " .  " " . $msg[1] . "<br> " . $msg[0] ;
-                            echo '</div>';
+        <div class="chatroom row align-items-center">
+            <div class="col-8 col-sm-9">
+                <h2 id="chatroomTitle"><?php if (isset($chatroom['name'])) echo $chatroom['name']; ?></h2>
+                <p id="chatroomDescription"><?php
+                    $nbr = 0;
+                    foreach ($arrayPeople as $person) {
+                        if ($person['Chatroom_id'] == $chatroom['id']) {
+                            $nbr++;
                         }
                     }
 
+                    if (isset($chat['nb_users_max'])) echo $nbr . " / " . $chatroom['nb_users_max'] . " "; ?><i
+                            class="fa fa-user" aria-hidden="true"></i></p>
+            </div>
+            <div class="col-4 col-sm-3">
+                <a class="btn btn-info btn-block" href="index.php?action=disconnect">Disconnect</a>
+            </div>
 
-                    echo'
+            <div class="col-12" style="background-color:yellow;">
+                <?php
+                if (isset($messages)) {
+                    foreach ($messages as $msg) {
+                        echo '<div style="background-color:white;border: 1px black solid;">';
+                        echo $msg[2] . " " . " " . $msg[1] . "<br> " . $msg[0];
+                        echo '</div>';
+                    }
+                }
+
+
+                echo '
                                                                                        
-                        <form id="formChatroom" method="post" action="index.php?action=updateMessage&chatid='.$chatroom["id"].'&userid='.$_SESSION["id"].'">
+                        <form id="formChatroom" method="post" action="index.php?action=updateMessage&chatid=' . $chatroom["id"] . '&userid=' . $_SESSION["id"] . '">
                             <div class="form-outline mb-4">
-                                <input type="texr" class="form-control" id="writeMessageHere" name="writeMessageHere" placeholder="Write Message Here">
+                                <input type="text" class="form-control" id="writeMessageHere" name="writeMessageHere" placeholder="Write Message Here" autocomplete="off">
                             </div>
                                <div class="col-4 col-sm-3">
                                 <button class="btn btn-info btn-lg btn-block" type="submit">Envoyer</button>
@@ -86,12 +87,11 @@ $title = "Chatroom";
                         </form>';
 
 
-                    ?>
-                </div>
-
+                ?>
             </div>
-            <br>
 
+        </div>
+        <br>
 
 
     </div>

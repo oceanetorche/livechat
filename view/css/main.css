@@ -2,11 +2,24 @@
 /*     LOGIN     */
 /* ------------- */
 
+#logInBody {
+    background-color: darkgray;
+}
 
+div.trans {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 1;
+}
+
+div.trans form {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
 
 #formWrapper {
-    background: #333;
-    color: #fff;
     text-align: center;
     position: absolute;
     padding: 20px;

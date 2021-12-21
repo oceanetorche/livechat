@@ -12,8 +12,8 @@ $title = "Login";
 
 ?>
     <html>
-    <body>
-    <div id="formWrapper">
+    <body id="logInBody">
+    <div id="formWrapper" class="trans">
 
         <form id="formLogin" method="post" action="index.php?action=login">
             <h1>WASSAP</h1>

@@ -13,8 +13,8 @@ $title = "Sign up";
 
 ?>
     <html>
-    <body>
-    <div id="formWrapper">
+    <body id = "signUpBody">
+    <div id="formWrapper" class="trans">
 
         <form id="formSignUp" method="post" action="index.php?action=signup">
 
