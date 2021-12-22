@@ -108,7 +108,7 @@ $title = "Sign up";
 
             <!-- Cancel Button -->
             <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit">
+                <button class="btn btn-info btn-lg btn-block" type="cancel" href="index.php?action=login">
                     Cancel
                 </button>
             </div>
