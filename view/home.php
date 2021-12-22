@@ -15,9 +15,7 @@ $title = "Home";
 <html>
 <body id="homeBody">
 
-
-
-    <div id="homeLittlewrapper" class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8">
+    <div id="homeWrapper" class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8">
 
         <!-- head  -->
         <div id="homeHead" class="sticky-top">
