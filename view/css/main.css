@@ -71,6 +71,9 @@ h1 {
 /* --------------- */
 /*     SIGN UP     */
 /* --------------- */
+#signUpBody {
+    background-color: darkgray;
+}
 
 /* --------------- */
 /*       HOME      */
