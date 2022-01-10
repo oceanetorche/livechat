@@ -1,3 +1,9 @@
+
+
+
+body {
+    font-family: Consolas, Arial, serif;
+}
 /* ------------- */
 /*     LOGIN     */
 /* ------------- */
@@ -27,7 +33,7 @@ div.trans form {
 }
 
 h1 {
-    font-family: "Bookman Old Style";
+    font-weight: bolder;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

@@ -1,0 +1,42 @@
+
+
+.simpleNeonButton a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.simpleNeonButton a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.simpleNeonButton a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.simpleNeonButton a:active {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.simpleNeonButton {
+    position: relative;
+    display: inline-block;
+    padding: 1px 4px;
+    text-transform: none;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.simpleNeonButton:hover {
+    color: black;
+    background: transparent;
+    box-shadow: 0 0 10px black;
+    transition-delay: 0s;
+}
