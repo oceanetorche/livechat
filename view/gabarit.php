@@ -18,9 +18,15 @@
     <!-- BOOTSTRAP CSS, JQUERY, JS, COMPILED JAVASCRIPT -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+    <!-- BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
     <!-- CUSTOMED CSS -->
-    <link rel="stylesheet" href="view/css/main.css">
     <link rel="stylesheet" type="text/css" href="view/content/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="view/css/main2.css">
+    <link rel="stylesheet" type="text/css" href="view/css/neonButton.css">
+    <link rel="stylesheet" type="text/css" href="view/css/simpleNeonButton.css">
 
 </head>
 <body>

@@ -13,61 +13,89 @@ $title = "Home";
 ?>
 
 <html>
-<body id="homeBody">
+<body>
+<div class="innerBody">
 
-    <div id="homeWrapper" class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8">
+    <!-- ---------------------------------- Header---------------------------------- -->
+    <header class="header sticky-top">
 
-        <!-- head  -->
-        <div id="homeHead" class="sticky-top">
-            <h1 id="headUp">
-                WASSAP
-            </h1>
-            <hr style="height: 5px; background-color: white">
-            <div class="d-flex justify-content-between align-items-center" id="headDown">
-                <div class="#">
-                    Welcome <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?>
-                    <a class="btn" href="index.php?action=modify">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </a>
-                </div>
+        <div class="hr"></div>
 
-                <a class="btn btn-danger " href="index.php?action=logout">
-                    LOG OUT
-                </a>
+        <div class="headerUp container-fluid d-flex justify-content-start" id="brand">
+            <div class="align-self-center">
+                WASSAPP
             </div>
-            <hr style="height: 5px; background-color: white">
         </div>
 
+        <div class="hr"></div>
 
-        <!-- main  -->
-        <div id="homeMain">
-            <?php foreach($arrayChatrooms as $chat){ ?>
-            <div class="chatroom row align-items-center">
-                <div class="col-8 col-sm-9">
-                    <h2 id="chatroomTitle"><?php if(isset($chat['name'])) echo $chat['name'];?></h2>
-                    <p id="chatroomDescription"><?php
-                        $nbr=0;
-                        foreach ($arrayPeople as $person){
-                            if($person['Chatroom_id']==$chat['id']){
-                                $nbr++;
-                            }
+        <div class="headerDown d-flex justify-content-between">
+            <div class="headerDownElements">
+                Welcome <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?>
+                <a href="index.php?action=modify"><i class="bi bi-pencil-square"></i></a>
+            </div>
+            <div class="headerDownElements neonButton">
+                <a href="index.php?action=logout">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Log Out <i class="bi bi-box-arrow-left"></i></a>
+            </div>
+        </div>
+
+        <div class="hr"></div>
+
+    </header><br>
+
+    <!-- ---------------------------------- Main---------------------------------- -->
+    <main class="main" id="mainHome">
+        <?php foreach($arrayChatrooms as $chat){ ?>
+        <div class="chatroom d-flex justify-content-between">
+            <div class="chatroomInformation align-self-center col-12 col-sm-9">
+                <div id="chatroomTitle">
+                    <?php if(isset($chat['name'])) echo $chat['name'];?>
+                </div>
+                <div id="chatroomDescription">
+                    <?php
+                    $nbr=0;
+                    foreach ($arrayPeople as $person){
+                        if($person['Chatroom_id']==$chat['id']){
+                            $nbr++;
                         }
+                    } ?>
 
-                        if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'] . " ";?><i class="fa fa-user" aria-hidden="true"></i></p>
-                </div>
-                <div class="col-4 col-sm-3">
-                    <a class="btn btn-info btn-block" href="index.php?action=connect&id=<?php echo $chat['id']?>">Connect</a>
-                </div>
 
+                </div>
+                <div>
+                    <?php if(isset($chat['nb_users_max'])) echo $nbr. " / " . $chat['nb_users_max'] . " ";?> <i class="bi bi-person-fill"></i>
+                </div>
             </div>
-                <br>
-            <?php }?>
 
+            <div class="connectButton align-self-center col-12 col-sm-3">
+                <div class="simpleNeonButton">
+                    <a href="index.php?action=connect&id=<?php echo $chat['id']?>">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Connect</a>
+                </div>
+            </div>
         </div>
-    </div>
+        <?php }?>
+    </main><br>
 
+    <!-- ---------------------------------- Footer---------------------------------- -->
+    <footer class="footer">
+        <div class="hr"></div>
+        <div>
+            Produced by Océane TORCHE & Henry BURGAT
+        </div>
+        <div class="hr"></div>
+    </footer>
 
-
+</div>
 </body>
 </html>
 
