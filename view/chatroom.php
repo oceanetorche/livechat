@@ -103,7 +103,7 @@ $title = "Chatroom";
                         <form style="padding: 15px;"id="formChatroom" method="post" action="index.php?action=updateMessage&chatid=' . $chatroom["id"] . '&userid=' . $_SESSION["id"] . '">
                             <div style="border: 1px solid black; border-radius: 10px" class="form-outline row">
                                 <div class="col-10 col-sm-11">
-                                    <input style="border: none" type="text" class="form-control" id="writeMessageHere" name="writeMessageHere" placeholder="Write Message Here" autocomplete="off">
+                                    <input style="border: none" type="text" class="form-control" id="writeMessageHere" name="writeMessageHere" placeholder="Write Message Here" autocomplete="off" maxlength="200">
                                 </div>                          
                                 
                                 <button class="col-2 col-sm-1" type="submit" style="border: none; background-color: transparent;" >
