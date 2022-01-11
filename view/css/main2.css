@@ -56,7 +56,7 @@ a:active {
     }
 
     .headerDown {
-        flex-direction: column;
+
     }
 
     .footer {
@@ -68,7 +68,7 @@ a:active {
         width: 100px;
     }
 
-    .chatroom {
+    .chatroom, .chatroomHome {
         flex-wrap: wrap;
     }
 }
@@ -122,13 +122,15 @@ footer{
     font-weight: bolder;
 }
 
-.chatroom {
+.chatroom, .chatroomHome {
     background: white;
     padding: 0;
 }
 
 #chatroomTitle {
     font-weight: bolder;
+    font-size: larger;
+    text-transform: uppercase;
 }
 
 #chatroomDescription {
@@ -235,10 +237,15 @@ h1 {
     font-weight: bolder;
 }
 
+.chatroom{
+    padding-bottom: 20px;
+}
+
 @media only screen and (max-width: 576px) {
     .simpleNeonButton {
         text-align: center;
         width: 100%;
+
     }
 }
 

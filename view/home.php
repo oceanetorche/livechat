@@ -51,7 +51,7 @@ $title = "Home";
     <!-- ---------------------------------- Main---------------------------------- -->
     <main class="main" id="mainHome">
         <?php foreach($arrayChatrooms as $chat){ ?>
-        <div class="chatroom d-flex justify-content-between">
+        <div class="chatroomHome d-flex justify-content-between">
             <div class="chatroomInformation align-self-center col-12 col-sm-9">
                 <div id="chatroomTitle">
                     <?php if(isset($chat['name'])) echo $chat['name'];?>
