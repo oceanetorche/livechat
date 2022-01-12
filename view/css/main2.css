@@ -50,6 +50,30 @@ body {
     text-decoration: none;
 }
 
+.linkBrand:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.linkBrand:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.linkBrand:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.linkBrand:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 /* ---------------------------------- Home breakpoint ----------------------------------*/
 @media only screen and (max-width: 1000px) {
     .innerBody {
