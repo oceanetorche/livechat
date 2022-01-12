@@ -32,7 +32,7 @@ $title = "Home";
         <div class="headerDown d-flex justify-content-between">
             <div class="headerDownElements">
                 Welcome <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?>
-                <a href="index.php?action=modify"><i class="bi bi-pencil-square"></i></a>
+                <a class="modifyIcon" href="index.php?action=modify"><i class="bi bi-pencil-square"></i></a>
             </div>
             <div class="headerDownElements neonButton">
                 <a href="index.php?action=logout">

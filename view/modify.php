@@ -13,56 +13,74 @@ $title = "Home";
 ?>
 
     <html>
-    <body id="homeBody">
 
+    <body>
+    <div class="innerBody">
 
+        <!-- ---------------------------------- Header---------------------------------- -->
+        <header class="header sticky-top">
 
-    <div id="homeLittlewrapper" class="col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="hr"></div>
 
-        <!-- head  -->
-        <div id="homeHead" class="sticky-top">
-            <h1 id="headUp">
-                WASSAP
-            </h1>
-            <hr style="height: 5px; background-color: white">
-            <div class="d-flex justify-content-between align-items-center" id="headDown">
-                <div class="#">
-                    Welcome <?php if(isset($_SESSION['username'])) echo $_SESSION['username'];?>
-                    <a class="btn" href="index.php?action=modify">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </a>
+            <div class="headerUp container-fluid d-flex justify-content-start" id="brand">
+                <div class="align-self-center">
+                    WASSAPP
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="headerDown d-flex justify-content-between">
+                <div class="headerDownElements">
+                    Welcome <?php if (isset($_SESSION['username'])) echo $_SESSION['username']; ?>
+                </div>
+                <div class="headerDownElements neonButton">
+                    <a href="index.php?action=logout">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Log Out <i class="bi bi-box-arrow-left"></i></a>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+        </header><br>
+
+        <!-- ---------------------------------- Main---------------------------------- -->
+        <main class="main" id="mainHome">
+            <!-- FORM  -->
+
+            <form id="formLogin" method="post" action="index.php?action=modify">
+
+                <h13>Change username</h13>
+                <div class="form-outline mb-4">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
                 </div>
 
-                <a class="btn btn-danger " href="index.php?action=logout">
-                    LOG OUT
-                </a>
+                <div class="pt-1 mb-4">
+                    <button class="btn btn-info btn-lg btn-block formSignButton" type="submit">Confirm</button>
+                </div>
+                <?php if (isset($errorMessage)) { ?>
+                <p class="alert alert-danger"> <?php echo $errorMessage;
+                    } ?></p>
+
+            </form>
+        </main><br>
+
+        <!-- ---------------------------------- Footer---------------------------------- -->
+        <footer class="footer">
+            <div class="hr"></div>
+            <div>
+                Produced by Océane TORCHE & Henry BURGAT
             </div>
-            <hr style="height: 5px; background-color: white">
-        </div>
-
-
-        <!-- FORM  -->
-
-        <form id="formLogin" method="post" action="index.php?action=modify">
-
-            <h13>Change username </h13>
-            <div class="form-outline mb-4">
-                <input type="text" class="form-control" name="username" placeholder="Username">
-            </div>
-
-            <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit">Confirm</button>
-            </div>
-            <?php if(isset($errorMessage)) {?>
-            <p class="alert alert-danger"> <?php echo $errorMessage; }?></p>
-
-        </form>
+            <div class="hr"></div>
+        </footer>
 
     </div>
-
-
-
     </body>
+
     </html>
 
 

@@ -18,9 +18,9 @@ $title = "Login";
         <form id="formLogin" method="post" action="index.php?action=login">
 
             <!-- Title -->
-            <h1>
+            <div class="formSignBrand">
                 WASSAP
-            </h1>
+            </div>
 
             <!-- Subtitle -->
             <h3>
@@ -46,7 +46,7 @@ $title = "Login";
             </div>
 
             <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+                <button class="btn btn-info btn-lg btn-block formSignButton" type="submit">Login</button>
             </div>
 
             <?php if(isset($errorMessage)) {?>

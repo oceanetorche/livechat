@@ -20,9 +20,9 @@ $title = "Sign up";
         <form id="formSignUp" method="post" action="index.php?action=signup">
 
             <!-- Title -->
-            <h1>
+            <div class="formSignBrand">
                 WASSAP
-            </h1>
+            </div>
 
             <!-- Subtitle -->
             <h3>
@@ -100,7 +100,7 @@ $title = "Sign up";
 
             <!-- SignUp button -->
             <div class="pt-1 mb-4">
-                <button class="btn btn-info btn-lg btn-block" type="submit" id="signUpButton"">
+                <button class="btn btn-info btn-lg btn-block formSignButton" type="submit" id="signUpButton"">
                     Sign Up
                 </button>
             </div>
@@ -109,7 +109,7 @@ $title = "Sign up";
 
             <!-- Cancel Button -->
             <div class="pt-1 mb-4">
-                <a class="btn btn-info btn-lg btn-block" href="index.php?action=login">
+                <a class="btn btn-info btn-lg btn-block formSignButton" href="index.php?action=login">
                     Cancel
                 </a>
             </div>

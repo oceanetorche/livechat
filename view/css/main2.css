@@ -24,25 +24,25 @@ body {
 }
 
 /* ---------------------------------- Home links ----------------------------------*/
-a:link {
+.modifyIcon:link {
     color: white;
     background-color: transparent;
     text-decoration: none;
 }
 
-a:visited {
+.modifyIcon:visited {
     color: white;
     background-color: transparent;
     text-decoration: none;
 }
 
-a:hover {
+.modifyIcon:hover {
     color: white;
     background-color: transparent;
     text-decoration: none;
 }
 
-a:active {
+.modifyIcon:active {
     color: white;
     background-color: transparent;
     text-decoration: none;
@@ -137,18 +137,52 @@ footer{
     overflow-wrap: break-word;
 }
 
+/* --------------- */
+/*     CHATROOM    */
+/* --------------- */
+
+.messageInput {
+    background-color: white;
+}
+
+.message {
+    border: 1px black solid;
+    padding: 0.7em;
+    overflow-wrap: break-word;
+}
+
+.messageInput div:not(:first-child){
+    margin-top: 0.2em;
+}
+
+.timestamp {
+    font-weight: bolder;
+}
+
+.chatroom{
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+    .simpleNeonButton {
+        text-align: center;
+        width: 100%;
+
+    }
+}
+
 .connectButton {
     text-align: right;
     font-weight: bolder;
 }
 
 /* ------------- */
-/*     LOGIN     */
+/*    SIGN IN    */
 /* ------------- */
 
 div.trans {
     margin: 30px;
-    background-color: #ffffff;
+    background-color: white;
     border: 1px solid black;
     opacity: 1;
 }
@@ -170,8 +204,14 @@ div.trans form {
     transform: translateX(-50%) translateY(-50%);
 }
 
-h1 {
+.formSignBrand {
     font-weight: bolder;
+    font-size: 3rem;
+}
+
+.formSignButton {
+    background-color: black;
+    color: white;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -215,38 +255,6 @@ h1 {
 /* --------------- */
 
 
-/* --------------- */
-/*     CHATROOM    */
-/* --------------- */
 
-.messageInput {
-    background-color: white;
-}
-
-.message {
-    border: 1px black solid;
-    padding: 0.7em;
-    overflow-wrap: break-word;
-}
-
-.messageInput div:not(:first-child){
-    margin-top: 0.2em;
-}
-
-.timestamp {
-    font-weight: bolder;
-}
-
-.chatroom{
-    padding-bottom: 20px;
-}
-
-@media only screen and (max-width: 576px) {
-    .simpleNeonButton {
-        text-align: center;
-        width: 100%;
-
-    }
-}
 
 
