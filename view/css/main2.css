@@ -236,8 +236,8 @@ div.trans form {
 }
 
 .formSignButton {
-    background-color: black;
-    color: white;
+    background-color: beige;
+    color: black;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -279,6 +279,15 @@ div.trans form {
 /* --------------- */
 /*     SIGN UP     */
 /* --------------- */
+
+/* --------------- */
+/*     MODIFY      */
+/* --------------- */
+
+.modifyBg {
+    background-color: white;
+    padding: 1rem;
+}
 
 
 
