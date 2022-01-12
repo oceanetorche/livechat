@@ -14,6 +14,9 @@ require "model/chatroomManager.php";
  * @brief This function aims to display the given chatrooms
  */
 function displayChatrooms(){
+    if(isset($_SESSION['id'])){
+        quitChatroom($_SESSION['id']);
+    };
     $arrayChatrooms = getChatrooms();
     $arrayPeople = getPeopleInChatroom();
     require "view/home.php";
