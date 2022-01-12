@@ -23,7 +23,7 @@ $title = "Home";
 
         <div class="headerUp container-fluid d-flex justify-content-start" id="brand">
             <div class="align-self-center">
-                WASSAPP
+                <a href="index.php?action=chatrooms">WASSAPP</a>
             </div>
         </div>
 

@@ -22,7 +22,7 @@ $title = "Home";
         <!-- head  -->
         <div id="homeHead" class="sticky-top">
             <h1 id="headUp">
-                WASSAP
+                <a href="index.php?action=chatrooms">WASSAPP</a>
             </h1>
             <hr style="height: 5px; background-color: white">
             <div class="d-flex justify-content-between align-items-center" id="headDown">
