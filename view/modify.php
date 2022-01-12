@@ -24,7 +24,7 @@ $title = "Home";
 
             <div class="headerUp container-fluid d-flex justify-content-start" id="brand">
                 <div class="align-self-center">
-                    WASSAPP
+                    <a href="index.php?action=chatrooms">WASSAPP</a>
                 </div>
             </div>
 
@@ -46,7 +46,8 @@ $title = "Home";
 
             <div class="hr"></div>
 
-        </header><br>
+        </header>
+        <br>
 
         <!-- ---------------------------------- Main---------------------------------- -->
         <main class="main" id="mainHome">
@@ -67,7 +68,8 @@ $title = "Home";
                     } ?></p>
 
             </form>
-        </main><br>
+        </main>
+        <br>
 
         <!-- ---------------------------------- Footer---------------------------------- -->
         <footer class="footer">
