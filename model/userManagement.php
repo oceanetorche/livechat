@@ -36,7 +36,6 @@ function addToDB($data){
         return 1;
     }
 
-
 }
 
 /**
@@ -119,7 +118,6 @@ function checkUsernameAlreadyExists($givenUsername){
     }
 
 }
-
 
 /**
  * @brief This function updates in DB the chatroom number of the user, sets it to null

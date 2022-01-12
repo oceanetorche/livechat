@@ -88,7 +88,6 @@ function executeQueryInsert($query,$param)
 
     }
 
-
     if ($dbConnexion != null) {
         $statement = $dbConnexion->prepare($query);
         $statement -> execute($param);
@@ -100,8 +99,6 @@ function executeQueryInsert($query,$param)
 
     return 0;
 }
-
-
 
 
 /**

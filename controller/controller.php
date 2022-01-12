@@ -7,10 +7,16 @@
  * @version   23.11.2021
  */
 
+/**
+ * @brief This function aims to display the home page
+ */
 function home(){
     require "view/home.php";
 }
 
+/**
+ * @brief This function aims to display the login page
+ */
 function welcome(){
     require "view/login.php";
 }
