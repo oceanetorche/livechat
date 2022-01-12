@@ -107,7 +107,7 @@ INSERT INTO chatrooms (NAME,nb_users_max) VALUES ('gaming',10);
 INSERT INTO chatrooms (NAME,nb_users_max) VALUES ('SI-CA2a',10);
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `password`, `registration_date`, `Chatroom_id`, `Users_states_id`) VALUES
-	(1, 'Oceane', 'Torche', 'oceanetorche', 'oceane@cpnv.ch', '$2y$10$/SUdio8NxNkm/MmKZPvhDe/VuXPSeoxTHD13bdEvTT3H2WRE7P1oi', '2021-12-17', NULL, 2);
+	(1, 'Oceane', 'Torche', 'oceanetorche', 'oceane@cpnv.ch', '$2y$10$1nU4dxwdxA7puq.IMd4Q3OKtTQksmJU8qA0yBBMKdncQgLGHCtYRe', '2021-12-17', NULL, 2);
 
 
 INSERT INTO messages (content,sending_timestamp,User_id,Chatroom_id) VALUES ("Salut?",NOW(),1,2);
