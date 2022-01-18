@@ -2,7 +2,7 @@
 
 /**
  * @file      dbConnector.php
- * @brief     This controller is designed to manage database accesses and transactions
+ * @brief     This file is designed to manage database accesses and transactions
  * @author    Created by Henry Burgat & Océane Torche
  * @version   28.11.2021
  */
@@ -16,11 +16,11 @@ function openDBConnexion()
     $tempDBConnexion = null;
 
     $sqlDriver = 'mysql';
-    $hostname = '10.229.32.181';
+    $hostname = 'localhost';
     $port = 3306;
     $charset = 'utf8';
     $dbName = 'LiveChat_DB';
-    $userName = 'livechat'; //to change
+    $userName = 'livechat';
     $userPwd = 'Pa$$w0rd';
     $dsn = $sqlDriver . ':host=' . $hostname . ';dbname=' . $dbName . ';port=' . $port . ';charset=' . $charset;
 

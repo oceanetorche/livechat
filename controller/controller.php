@@ -2,7 +2,7 @@
 
 /**
  * @file      controller.php
- * @brief     File description
+ * @brief     This controller is designed to manage view
  * @author    Created by Henry Burgat & Océane Torche
  * @version   23.11.2021
  */

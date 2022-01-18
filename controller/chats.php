@@ -2,8 +2,8 @@
 
 /**
  * @file      chats.php
- * @brief     File description
- * @author    Created by Oceane.TORCHE
+ * @brief     This controller is designed to manage chatrooms
+ * @author    Created by Henry Burgat and Océane Torche
  * @version   08.12.2021
  */
 

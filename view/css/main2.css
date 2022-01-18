@@ -1,4 +1,9 @@
-
+/**
+ * @file      main2.css
+ * @brief     This file is designed to style the app
+ * @author    Created by Henry Burgat & Océane Torche
+ * @version   23.11.2021
+ */
 
 * {
     box-sizing: border-box;
@@ -14,7 +19,7 @@ body {
 
 
 /* ------------- */
-/*     HOME     */
+/*     HOME      */
 /* ------------- */
 
 .innerBody{

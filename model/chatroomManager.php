@@ -2,8 +2,8 @@
 
 /**
  * @file      chatroomManager.php
- * @brief     File description
- * @author    Created by Oceane.TORCHE
+ * @brief     This file is design to manage the chatrooms in DB
+ * @author    Created by Henry Burgat and Océane Torche
  * @version   08.12.2021
  */
 

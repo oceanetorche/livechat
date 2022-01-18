@@ -2,7 +2,7 @@
 
 /**
  * @file      userManagement.php
- * @brief     File description
+ * @brief     This file is design to manage the users in DB
  * @author    Created by Henry Burgat & Océane Torche
  * @version   23.11.2021
  */
