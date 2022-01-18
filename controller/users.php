@@ -88,5 +88,4 @@ function updateChatroom($chatroomId){
     if($chatroomId==null){
         header("Location: " . 'index.php?action=chatrooms');
     }
-
 }
