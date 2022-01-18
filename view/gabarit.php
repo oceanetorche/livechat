@@ -2,7 +2,7 @@
 
 /**
  * @file      gabarit.php
- * @brief     File description
+ * @brief     This file is designed to display a common layout
  * @author    Created by Henry Burgat & Océane Torche
  * @version   30.11.2021
  */

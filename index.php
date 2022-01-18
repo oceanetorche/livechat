@@ -2,7 +2,7 @@
 
 /**
  * @file      index.php
- * @brief     File description
+ * @brief     This file is the rooter managing the link with controllers
  * @author    Created by Henry Burgat & Océane Torche
  * @version   23.11.2021
  */
