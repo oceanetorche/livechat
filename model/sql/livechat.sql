@@ -1,3 +1,11 @@
+CREATE USER 'livechat'@'localhost' IDENTIFIED BY 'Pa$$w0rd';
+GRANT USAGE ON *.* TO 'livechat'@'localhost';
+GRANT EXECUTE, SELECT, ALTER, CREATE, CREATE VIEW, DELETE, INSERT, UPDATE  ON `livechat\_db`.* TO 'livechat'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'livechat'@'localhost';
+
+
+
 -- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
@@ -107,7 +115,7 @@ INSERT INTO chatrooms (NAME,nb_users_max) VALUES ('gaming',10);
 INSERT INTO chatrooms (NAME,nb_users_max) VALUES ('SI-CA2a',10);
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `password`, `registration_date`, `Chatroom_id`, `Users_states_id`) VALUES
-	(1, 'Oceane', 'Torche', 'oceanetorche', 'oceane@cpnv.ch', '$2y$10$1nU4dxwdxA7puq.IMd4Q3OKtTQksmJU8qA0yBBMKdncQgLGHCtYRe', '2021-12-17', NULL, 2);
+	(1, 'Jean', 'Tille', 'user', 'user@cpnv.ch', '$2y$10$0njRBvJtE7Sso90hgtZlbelSXp3rFq5QXfsrRDJdiN4w68nvbdEMq', '2021-12-17', NULL, 2);
 
 
 INSERT INTO messages (content,sending_timestamp,User_id,Chatroom_id) VALUES ("Salut?",NOW(),1,2);

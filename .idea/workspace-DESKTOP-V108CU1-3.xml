@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88e4fb92-cc82-4fe7-a3ce-2688ffe7bb0e" name="Default Changelist" comment="verifyPassword not working" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="21K9HtD0jQEgv4zTrSzZi5Lj7na" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ba-Khanh-Henry.BURGA\OneDrive - CPNV\livechat\model" />
+      <recent name="C:\Users\Oceane.PICHONNAZ\OneDrive - CPNV\Projet-web\livechat\view" />
+      <recent name="C:\Users\Oceane.PICHONNAZ\OneDrive - CPNV\Projet-web\livechat\view\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ba-Khanh-Henry.BURGA\OneDrive - CPNV\livechat\maquettes" />
+      <recent name="C:\Users\Oceane.PICHONNAZ\OneDrive - CPNV\Projet-web\livechat\view\js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" nameIsGenerated="true" document_root="$PROJECT_DIR$" port="4580">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88e4fb92-cc82-4fe7-a3ce-2688ffe7bb0e" name="Default Changelist" comment="" />
+      <created>1637678826687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637678826687</updated>
+      <workItem from="1637678828618" duration="3394000" />
+      <workItem from="1637755076833" duration="130000" />
+      <workItem from="1637921486077" duration="284000" />
+      <workItem from="1637922709363" duration="345000" />
+      <workItem from="1637923077457" duration="1032000" />
+      <workItem from="1638255762101" duration="434000" />
+      <workItem from="1638277660361" duration="3000" />
+      <workItem from="1638277674017" duration="600000" />
+      <workItem from="1638279239356" duration="89000" />
+      <workItem from="1638282650076" duration="1941000" />
+      <workItem from="1638284803048" duration="2858000" />
+      <workItem from="1638362365220" duration="70000" />
+      <workItem from="1638364406653" duration="18000" />
+      <workItem from="1638364544880" duration="3903000" />
+      <workItem from="1638514979964" duration="29000" />
+      <workItem from="1638521899396" duration="630000" />
+      <workItem from="1638522824560" duration="61000" />
+      <workItem from="1638522982824" duration="6949000" />
+      <workItem from="1638797987824" duration="1251000" />
+      <workItem from="1638860650199" duration="16000" />
+      <workItem from="1638880472753" duration="5021000" />
+      <workItem from="1638885897598" duration="15198000" />
+      <workItem from="1638988832912" duration="298000" />
+      <workItem from="1639125668655" duration="7965000" />
+      <workItem from="1639382970993" duration="1243000" />
+      <workItem from="1639467036138" duration="9000" />
+      <workItem from="1639474622374" duration="1208000" />
+      <workItem from="1639493008866" duration="373000" />
+      <workItem from="1640119253328" duration="419000" />
+    </task>
+    <task id="LOCAL-00001" summary="template">
+      <created>1637678943577</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637678943577</updated>
+    </task>
+    <task id="LOCAL-00002" summary="sql">
+      <created>1637679902444</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637679902444</updated>
+    </task>
+    <task id="LOCAL-00003" summary="template">
+      <created>1637680082615</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637680082615</updated>
+    </task>
+    <task id="LOCAL-00004" summary="sql">
+      <created>1637680216832</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637680216832</updated>
+    </task>
+    <task id="LOCAL-00005" summary="login.php">
+      <created>1637680577964</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637680577964</updated>
+    </task>
+    <task id="LOCAL-00006" summary="template">
+      <created>1637680710721</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637680710721</updated>
+    </task>
+    <task id="LOCAL-00007" summary="template">
+      <created>1637680764305</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637680764305</updated>
+    </task>
+    <task id="LOCAL-00008" summary="sign up page">
+      <created>1637681079586</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637681079586</updated>
+    </task>
+    <task id="LOCAL-00009" summary="sign up page form">
+      <created>1637681310608</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637681310608</updated>
+    </task>
+    <task id="LOCAL-00010" summary="login page form">
+      <created>1637681408187</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637681408187</updated>
+    </task>
+    <task id="LOCAL-00011" summary="base">
+      <created>1637682041433</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637682041433</updated>
+    </task>
+    <task id="LOCAL-00012" summary="readme">
+      <created>1637755125088</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637755125088</updated>
+    </task>
+    <task id="LOCAL-00013" summary="readme">
+      <created>1637921525115</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1637921525115</updated>
+    </task>
+    <task id="LOCAL-00014" summary="organisation">
+      <created>1637922782504</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1637922782504</updated>
+    </task>
+    <task id="LOCAL-00015" summary="organisation file">
+      <created>1637923089327</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1637923089327</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test">
+      <created>1637923901722</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1637923901722</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ajout DBconnector">
+      <created>1638278001413</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1638278001413</updated>
+    </task>
+    <task id="LOCAL-00018" summary="mofification DBconnector">
+      <created>1638278151562</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1638278151562</updated>
+    </task>
+    <task id="LOCAL-00019" summary="mofification DBconnector">
+      <created>1638278224813</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1638278224813</updated>
+    </task>
+    <task id="LOCAL-00020" summary="mofification DBconnector">
+      <created>1638278234984</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1638278234984</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add gabarit to have the skeleton">
+      <created>1638283346918</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1638283346918</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add bootstrap library">
+      <created>1638283358829</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1638283358829</updated>
+    </task>
+    <task id="LOCAL-00023" summary="ob start function&#10;and require gabarit">
+      <created>1638283599685</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1638283599685</updated>
+    </task>
+    <task id="LOCAL-00024" summary="index goes to signup">
+      <created>1638284538422</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1638284538422</updated>
+    </task>
+    <task id="LOCAL-00025" summary="&lt;h4&gt;&gt;">
+      <created>1638284569766</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1638284569766</updated>
+    </task>
+    <task id="LOCAL-00026" summary="mofification login">
+      <created>1638287643716</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1638287643716</updated>
+    </task>
+    <task id="LOCAL-00027" summary="account link">
+      <created>1638364590765</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1638364590765</updated>
+    </task>
+    <task id="LOCAL-00028" summary="update login">
+      <created>1638368518629</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1638368518629</updated>
+    </task>
+    <task id="LOCAL-00029" summary="maincss responsive loginform">
+      <created>1638524502934</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1638524502934</updated>
+    </task>
+    <task id="LOCAL-00030" summary="gabarit chemin en dur pour css">
+      <created>1638525182795</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1638525182795</updated>
+    </task>
+    <task id="LOCAL-00031" summary="modif visuel Login &amp; Sign up">
+      <created>1638528900070</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1638528900070</updated>
+    </task>
+    <task id="LOCAL-00032" summary="modif visuel Login &amp; Sign up">
+      <created>1638529654660</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1638529654660</updated>
+    </task>
+    <task id="LOCAL-00033" summary="modif visuel Login &amp; Sign up">
+      <created>1638880587579</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1638880587579</updated>
+    </task>
+    <task id="LOCAL-00034" summary="modif visuel Login &amp; Sign up">
+      <created>1638883133623</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1638883133623</updated>
+    </task>
+    <task id="LOCAL-00035" summary="js">
+      <created>1638886024666</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1638886024666</updated>
+    </task>
+    <task id="LOCAL-00036" summary="js">
+      <created>1638886130968</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1638886130968</updated>
+    </task>
+    <task id="LOCAL-00037" summary="visuel HOME">
+      <created>1638892164096</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1638892164096</updated>
+    </task>
+    <task id="LOCAL-00038" summary="visuel HOMEtest">
+      <created>1638968557940</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1638968557940</updated>
+    </task>
+    <task id="LOCAL-00039" summary="visuel HOMEtest">
+      <created>1638975766360</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1638975766360</updated>
+    </task>
+    <task id="LOCAL-00040" summary="verifyPassword not working">
+      <created>1639133720635</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1639133720635</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="sign up page" />
+    <MESSAGE value="sign up page form" />
+    <MESSAGE value="login page form" />
+    <MESSAGE value="base" />
+    <MESSAGE value="readme" />
+    <MESSAGE value="organisation" />
+    <MESSAGE value="organisation file" />
+    <MESSAGE value="test" />
+    <MESSAGE value="ajout DBconnector" />
+    <MESSAGE value="add gabarit to have the skeleton" />
+    <MESSAGE value="add bootstrap library" />
+    <MESSAGE value="ob start function&#10;and require gabarit" />
+    <MESSAGE value="index goes to signup" />
+    <MESSAGE value="&lt;h4&gt;&gt;" />
+    <MESSAGE value="mofification DBconnector" />
+    <MESSAGE value="mofification login" />
+    <MESSAGE value="account link" />
+    <MESSAGE value="update login" />
+    <MESSAGE value="maincss responsive loginform" />
+    <MESSAGE value="gabarit chemin en dur pour css" />
+    <MESSAGE value="modif visuel Login &amp; Sign up" />
+    <MESSAGE value="js" />
+    <MESSAGE value="visuel HOME" />
+    <MESSAGE value="visuel HOMEtest" />
+    <MESSAGE value="verifyPassword not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="verifyPassword not working" />
+  </component>
+</project>
