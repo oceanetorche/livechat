@@ -2,7 +2,7 @@
 
 /**
  * @file      dbConnector.php
- * @brief     This controller is designed to manage database accesses and transactions
+ * @brief     This file is designed to manage database accesses and transactions
  * @author    Created by Henry Burgat & Océane Torche
  * @version   28.11.2021
  */

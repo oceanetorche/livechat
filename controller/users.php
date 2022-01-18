@@ -2,7 +2,7 @@
 
 /**
  * @file      users.php
- * @brief     File description
+ * @brief     This controller is designed to manage user interactions
  * @author    Created by Henry Burgat & Océane Torche
  * @version   23.11.2021
  */
@@ -44,7 +44,10 @@ function login($data){
     }
 }
 
-
+/**
+ * @brief This function aims to modify the username
+ * @param $data
+ */
 function modify($data){
     quitChatroom($_SESSION['id']);
     if(isset($data['username'])){
