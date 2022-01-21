@@ -3,10 +3,14 @@
 PROJET DEV -- SI-CA2a
 
 Nom du projet: Mini Live Chat
+
 Membres du groupe : 
+
 	- Océane Torche
 	- Henry Burgat
+	
 Responsables de projet : 
+
 	- Julien Ithurbide
 	
 Languages utilisés :  HTML/CSS, Javascript, PHP, MySQL
