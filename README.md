@@ -23,5 +23,5 @@ Description :
 - Les messages sont tagger de l'identifiant de l'envoyeur et de l'heure d'envoi
 - La conversation n'est gardée qu'un seul jour.
 
-
-La documentation explique la mise en place de l'infrastructure.
+Documentation:
+La documentation contient les maquettes ainsi que la mise en place de l'infrastructure.
