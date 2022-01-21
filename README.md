@@ -22,3 +22,6 @@ Description :
 - Un user peut envoyer des messages (limité jusqu'à 200 caractères).
 - Les messages sont tagger de l'identifiant de l'envoyeur et de l'heure d'envoi
 - La conversation n'est gardée qu'un seul jour.
+
+
+La documentation explique la mise en place de l'infrastructure.
