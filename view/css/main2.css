@@ -79,31 +79,6 @@ body {
     text-decoration: none;
 }
 
-/* ---------------------------------- Home breakpoint ----------------------------------*/
-@media only screen and (max-width: 1000px) {
-    .innerBody {
-        background: transparent;
-        width: 100%;
-    }
-
-    .headerDown {
-
-    }
-
-    .footer {
-        width: 100%;
-        left: 0;
-    }
-
-    .neonButton {
-        width: 100px;
-    }
-
-    .chatroom, .chatroomHome {
-        flex-wrap: wrap;
-    }
-}
-
 /* ---------------------------------- Home header ----------------------------------*/
 header {
     background: black;
@@ -194,14 +169,6 @@ footer{
     padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 576px) {
-    .simpleNeonButton {
-        text-align: center;
-        width: 100%;
-
-    }
-}
-
 .connectButton {
     text-align: right;
     font-weight: bolder;
@@ -245,6 +212,24 @@ div.trans form {
     color: black;
 }
 
+/* --------------- */
+/*     SIGN UP     */
+/* --------------- */
+
+
+/* --------------- */
+/*     MODIFY      */
+/* --------------- */
+
+.modifyBg {
+    background-color: white;
+    padding: 1rem;
+}
+
+/* --------------- */
+/*  MEDIA QUERIES  */
+/* --------------- */
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     #formWrapper {
@@ -281,20 +266,37 @@ div.trans form {
     }
 }
 
-/* --------------- */
-/*     SIGN UP     */
-/* --------------- */
+@media only screen and (max-width: 576px) {
+    .simpleNeonButton {
+        text-align: center;
+        width: 100%;
 
-/* --------------- */
-/*     MODIFY      */
-/* --------------- */
-
-.modifyBg {
-    background-color: white;
-    padding: 1rem;
+    }
 }
 
+@media only screen and (max-width: 1000px) {
+    .innerBody {
+        background: transparent;
+        width: 100%;
+    }
 
+    .headerDown {
+
+    }
+
+    .footer {
+        width: 100%;
+        left: 0;
+    }
+
+    .neonButton {
+        width: 100px;
+    }
+
+    .chatroom, .chatroomHome {
+        flex-wrap: wrap;
+    }
+}
 
 
 
